@@ -1,0 +1,1407 @@
+<title>Yasmine Laajailia — Desktop Portfolio</title>
+<style>
+  :root {
+    color-scheme: light;
+    --wall-1: #FFC4DF;
+    --wall-2: #DCC4FA;
+    --wall-3: #FFDFC6;
+    --wall-4: #C6ECFF;
+    --wall-base: #FFEAF3;
+
+    --chrome:      rgba(255, 255, 255, 0.74);
+    --chrome-solid:#FFFFFF;
+    --chrome-edge: rgba(255, 255, 255, 0.85);
+    --bar:         rgba(255, 255, 255, 0.6);
+
+    --ink:      #4B2A40;
+    --ink-soft: #7A5570;
+    --muted:    #A2819A;
+    --rule:     rgba(180, 130, 165, 0.22);
+
+    --accent:   #F2569B;
+    --accent-2: #A472E8;
+
+    --c-pink:   #F2569B;
+    --c-lilac:  #A472E8;
+    --c-blue:   #5AA6E8;
+    --c-mint:   #3FBFA0;
+    --c-peach:  #F2884E;
+    --c-violet: #7B6BE0;
+
+    --shadow-win: 0 2px 6px rgba(75, 42, 64, 0.08), 0 24px 60px -18px rgba(75, 42, 64, 0.34);
+    --shadow-sm:  0 2px 10px rgba(75, 42, 64, 0.12);
+
+    --font-ui: "Avenir Next", "Century Gothic", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-mono: "SF Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+
+    --s-1: 0.74rem;
+    --s0:  0.86rem;
+    --s1:  0.97rem;
+    --s2:  1.2rem;
+    --s3:  1.55rem;
+    --s4:  2.1rem;
+
+    --r-win: 16px;
+    --r-sm: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --wall-1: #5C2A5E;
+      --wall-2: #2E1D52;
+      --wall-3: #6B2F4E;
+      --wall-4: #1C2A52;
+      --wall-base: #180F26;
+
+      --chrome:      rgba(46, 32, 54, 0.78);
+      --chrome-solid:#2B1E33;
+      --chrome-edge: rgba(255, 255, 255, 0.12);
+      --bar:         rgba(40, 28, 48, 0.66);
+
+      --ink:      #FCEBF5;
+      --ink-soft: #DCBFD4;
+      --muted:    #A98CA4;
+      --rule:     rgba(255, 210, 240, 0.16);
+
+      --accent:   #FF87BC;
+      --accent-2: #C4A0F5;
+
+      --c-pink:   #FF87BC;
+      --c-lilac:  #C4A0F5;
+      --c-blue:   #86C4F5;
+      --c-mint:   #6FD9BE;
+      --c-peach:  #F5A87A;
+      --c-violet: #A99CF0;
+
+      --shadow-win: 0 2px 6px rgba(0, 0, 0, 0.4), 0 26px 64px -18px rgba(0, 0, 0, 0.75);
+      --shadow-sm:  0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --wall-1: #5C2A5E; --wall-2: #2E1D52; --wall-3: #6B2F4E; --wall-4: #1C2A52;
+    --wall-base: #180F26;
+    --chrome: rgba(46, 32, 54, 0.78); --chrome-solid: #2B1E33;
+    --chrome-edge: rgba(255, 255, 255, 0.12); --bar: rgba(40, 28, 48, 0.66);
+    --ink: #FCEBF5; --ink-soft: #DCBFD4; --muted: #A98CA4;
+    --rule: rgba(255, 210, 240, 0.16);
+    --accent: #FF87BC; --accent-2: #C4A0F5;
+    --c-pink: #FF87BC; --c-lilac: #C4A0F5; --c-blue: #86C4F5;
+    --c-mint: #6FD9BE; --c-peach: #F5A87A; --c-violet: #A99CF0;
+    --shadow-win: 0 2px 6px rgba(0, 0, 0, 0.4), 0 26px 64px -18px rgba(0, 0, 0, 0.75);
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.45);
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --wall-1: #FFC4DF; --wall-2: #DCC4FA; --wall-3: #FFDFC6; --wall-4: #C6ECFF;
+    --wall-base: #FFEAF3;
+    --chrome: rgba(255, 255, 255, 0.74); --chrome-solid: #FFFFFF;
+    --chrome-edge: rgba(255, 255, 255, 0.85); --bar: rgba(255, 255, 255, 0.6);
+    --ink: #4B2A40; --ink-soft: #7A5570; --muted: #A2819A;
+    --rule: rgba(180, 130, 165, 0.22);
+    --accent: #F2569B; --accent-2: #A472E8;
+    --c-pink: #F2569B; --c-lilac: #A472E8; --c-blue: #5AA6E8;
+    --c-mint: #3FBFA0; --c-peach: #F2884E; --c-violet: #7B6BE0;
+    --shadow-win: 0 2px 6px rgba(75, 42, 64, 0.08), 0 24px 60px -18px rgba(75, 42, 64, 0.34);
+    --shadow-sm: 0 2px 10px rgba(75, 42, 64, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: var(--s1);
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--wall-base);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------------- wallpaper ---------------- */
+
+  .wallpaper {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .wallpaper span {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.9;
+  }
+
+  .w1 { width: 55vw; height: 55vw; background: var(--wall-1); top: -14vw; left: -8vw;  animation: float1 26s ease-in-out infinite; }
+  .w2 { width: 48vw; height: 48vw; background: var(--wall-2); top: 22vh;  right: -10vw; animation: float2 32s ease-in-out infinite; }
+  .w3 { width: 42vw; height: 42vw; background: var(--wall-3); bottom: -16vw; left: 18vw; animation: float3 30s ease-in-out infinite; }
+  .w4 { width: 34vw; height: 34vw; background: var(--wall-4); top: 8vh; left: 42vw; animation: float2 38s ease-in-out infinite reverse; }
+
+  @keyframes float1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(5vw, 4vh) scale(1.1); } }
+  @keyframes float2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-6vw, 5vh) scale(0.92); } }
+  @keyframes float3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(4vw, -5vh) scale(1.08); } }
+
+  #sparkles { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+
+  /* ---------------- menu bar ---------------- */
+
+  .menubar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 34px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0.9rem;
+    background: var(--bar);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid var(--chrome-edge);
+    font-size: var(--s0);
+  }
+
+  .menubar .os {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .menubar .os::before {
+    content: "";
+    width: 13px; height: 13px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+
+  .menubar .spacer { flex: 1; }
+
+  .menubar .item { color: var(--ink-soft); }
+
+  .menubar button {
+    font: inherit;
+    color: var(--ink-soft);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+  }
+
+  .menubar button:hover { background: rgba(150, 100, 140, 0.14); color: var(--ink); }
+
+  #clock { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+  /* ---------------- desktop icons ---------------- */
+
+  .desktop {
+    position: fixed;
+    inset: 34px 0 92px 0;
+    z-index: 2;
+    padding: 1.1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 92px);
+    grid-auto-rows: 96px;
+    gap: 0.4rem;
+    align-content: start;
+    justify-content: start;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.3rem;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: var(--s-1);
+    color: var(--ink);
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: center;
+    transition: background 0.18s, transform 0.18s;
+  }
+
+  .icon:hover { background: rgba(255, 255, 255, 0.34); transform: translateY(-2px); }
+  .icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .icon .glyph {
+    width: 46px; height: 46px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: var(--chrome-solid);
+    box-shadow: var(--shadow-sm);
+    color: var(--tint, var(--accent));
+  }
+
+  .icon .glyph svg { width: 24px; height: 24px; }
+
+  .icon .label {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 6px;
+    padding: 0.1rem 0.35rem;
+    line-height: 1.25;
+  }
+
+  :root[data-theme="dark"] .icon .label,
+  :root[data-theme="dark"] .icon:hover { background: rgba(40, 28, 48, 0.5); }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .icon .label { background: rgba(40, 28, 48, 0.5); }
+    :root:not([data-theme="light"]) .icon:hover { background: rgba(40, 28, 48, 0.5); }
+  }
+
+  /* ---------------- windows ---------------- */
+
+  .win {
+    position: fixed;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    background: var(--chrome);
+    backdrop-filter: blur(26px) saturate(1.5);
+    -webkit-backdrop-filter: blur(26px) saturate(1.5);
+    border: 1px solid var(--chrome-edge);
+    border-radius: var(--r-win);
+    box-shadow: var(--shadow-win);
+    overflow: hidden;
+    min-width: 260px;
+    min-height: 160px;
+  }
+
+  .win.open { display: flex; animation: pop 0.24s cubic-bezier(0.2, 0.8, 0.3, 1); }
+
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.94) translateY(10px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    cursor: grab;
+    user-select: none;
+    flex: none;
+  }
+
+  .titlebar:active { cursor: grabbing; }
+
+  .dots { display: flex; gap: 0.4rem; flex: none; }
+
+  .dots button {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: var(--d, #D9C3D4);
+  }
+
+  .dots .close { --d: #FF6B8E; }
+  .dots .min   { --d: #FFC46B; }
+  .dots .zoom  { --d: #6BD9A8; }
+
+  .titlebar .name {
+    font-size: var(--s0);
+    font-weight: 600;
+    color: var(--ink-soft);
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 44px;
+  }
+
+  .win-body {
+    padding: 1.3rem 1.4rem 1.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    flex: 1;
+  }
+
+  /* ---------------- window content ---------------- */
+
+  .win-body h2 {
+    font-size: var(--s3);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.2rem;
+    line-height: 1.15;
+  }
+
+  .win-body h3 {
+    font-size: var(--s1);
+    font-weight: 700;
+    margin: 0 0 0.15rem;
+    letter-spacing: -0.015em;
+  }
+
+  .win-body p { margin: 0; }
+
+  .stack-col { display: flex; flex-direction: column; gap: 1.1rem; }
+
+  .lede { color: var(--ink-soft); font-size: var(--s0); }
+
+  .tagline {
+    font-size: var(--s4);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .tagline .a { color: var(--c-blue); }
+  .tagline .b { color: var(--c-lilac); }
+  .tagline .c { color: var(--c-peach); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding: 0; margin: 0; }
+
+  .chips li {
+    font-size: var(--s-1);
+    color: var(--ink-soft);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  :root[data-theme="dark"] .chips li { background: rgba(255, 255, 255, 0.06); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .chips li { background: rgba(255, 255, 255, 0.06); }
+  }
+
+  .btn-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  .btn {
+    font: inherit;
+    font-size: var(--s0);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.55rem 1.05rem;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--chrome-solid);
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn.pri {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-color: transparent;
+    color: #FFF;
+  }
+
+  /* project list inside Projects window */
+
+  .files { display: flex; flex-direction: column; gap: 0.3rem; }
+
+  .file {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: var(--r-sm);
+    border: 1px solid transparent;
+    background: none;
+    font: inherit;
+    text-align: left;
+    color: var(--ink);
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.18s, border-color 0.18s;
+  }
+
+  .file:hover { background: rgba(255, 255, 255, 0.5); border-color: var(--rule); }
+
+  :root[data-theme="dark"] .file:hover { background: rgba(255, 255, 255, 0.07); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .file:hover { background: rgba(255, 255, 255, 0.07); }
+  }
+
+  .file .fglyph {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: color-mix(in oklab, var(--tint) 18%, transparent);
+    color: var(--tint);
+    flex: none;
+  }
+
+  .file .fglyph svg { width: 17px; height: 17px; }
+
+  .file .fmeta { flex: 1; min-width: 0; }
+
+  .file .fname { font-weight: 600; font-size: var(--s0); }
+
+  .file .fdesc {
+    font-size: var(--s-1);
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .file .fbadge {
+    font-size: var(--s-1);
+    font-weight: 600;
+    color: var(--tint);
+    background: color-mix(in oklab, var(--tint) 15%, transparent);
+    border-radius: 999px;
+    padding: 0.12rem 0.5rem;
+    flex: none;
+  }
+
+  /* project detail window */
+
+  .flow { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  .transform {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    font-size: var(--s-1);
+    font-weight: 600;
+    padding: 0.32rem 0.75rem;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--tint) 14%, transparent);
+    color: var(--ink-soft);
+  }
+
+  .transform .arrow, .transform .out { color: var(--tint); }
+
+  .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.8rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .metrics li { display: flex; flex-direction: column; }
+
+  .metrics .fig {
+    font-size: var(--s2);
+    font-weight: 700;
+    color: var(--tint);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  .metrics .cap { font-size: var(--s-1); color: var(--muted); }
+
+  /* experience */
+
+  .role { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule); }
+  .role:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .when {
+    font-size: var(--s-1);
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .now {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--c-mint) 18%, transparent);
+    color: var(--c-mint);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .now::before {
+    content: "";
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--c-mint);
+    animation: blink 2.4s ease-in-out infinite;
+  }
+
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .where { font-size: var(--s-1); color: var(--muted); }
+
+  .role ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: var(--s0);
+    color: var(--ink-soft);
+  }
+
+  .role li::marker { color: var(--accent); }
+
+  /* skills */
+
+  .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem; }
+
+  .skill {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-sm);
+    padding: 0.85rem 0.9rem;
+  }
+
+  :root[data-theme="dark"] .skill { background: rgba(255, 255, 255, 0.05); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .skill { background: rgba(255, 255, 255, 0.05); }
+  }
+
+  .skill h3 {
+    font-size: var(--s-1);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tint);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.4rem;
+  }
+
+  .skill h3::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--tint);
+  }
+
+  .skill p { font-size: var(--s0); color: var(--ink-soft); }
+
+  /* credentials */
+
+  .certs { display: flex; flex-direction: column; gap: 0.8rem; list-style: none; padding: 0; margin: 0; }
+  .certs li { display: flex; flex-direction: column; }
+  .certs .issuer { font-size: var(--s-1); color: var(--muted); }
+
+  /* contact form */
+
+  .field { display: flex; flex-direction: column; gap: 0.3rem; }
+
+  .field label { font-size: var(--s-1); font-weight: 600; color: var(--ink-soft); }
+
+  .field input, .field textarea {
+    font: inherit;
+    font-size: var(--s0);
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-sm);
+    padding: 0.6rem 0.7rem;
+    width: 100%;
+  }
+
+  :root[data-theme="dark"] .field input,
+  :root[data-theme="dark"] .field textarea { background: rgba(255, 255, 255, 0.07); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .field input,
+    :root:not([data-theme="light"]) .field textarea { background: rgba(255, 255, 255, 0.07); }
+  }
+
+  .field textarea { resize: vertical; min-height: 5.5rem; }
+
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+
+  .note { font-size: var(--s-1); color: var(--muted); }
+  .note a { color: var(--accent); }
+
+  .sent { font-size: var(--s-1); color: var(--c-mint); font-weight: 600; }
+  .sent[hidden] { display: none; }
+
+  /* ---------------- dock ---------------- */
+
+  .dock {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 800;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.35rem;
+    padding: 0.5rem 0.6rem;
+    background: var(--bar);
+    backdrop-filter: blur(22px) saturate(1.5);
+    -webkit-backdrop-filter: blur(22px) saturate(1.5);
+    border: 1px solid var(--chrome-edge);
+    border-radius: 20px;
+    box-shadow: var(--shadow-win);
+    max-width: calc(100vw - 24px);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .dock::-webkit-scrollbar { display: none; }
+
+  .dock button {
+    position: relative;
+    width: 46px; height: 46px;
+    border: none;
+    border-radius: 13px;
+    background: var(--chrome-solid);
+    color: var(--tint, var(--accent));
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    flex: none;
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.3, 1);
+  }
+
+  .dock button:hover { transform: translateY(-8px) scale(1.08); }
+  .dock button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .dock button svg { width: 23px; height: 23px; }
+
+  .dock button::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; left: 50%;
+    transform: translateX(-50%);
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .dock button[data-active="true"]::after { opacity: 1; }
+
+  .dock .tip {
+    position: absolute;
+    bottom: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--chrome-solid);
+    color: var(--ink);
+    font-size: var(--s-1);
+    font-weight: 600;
+    padding: 0.22rem 0.6rem;
+    border-radius: 7px;
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s;
+  }
+
+  .dock button:hover .tip, .dock button:focus-visible .tip { opacity: 1; }
+
+  /* ---------------- mobile ---------------- */
+
+  @media (max-width: 760px) {
+    .desktop {
+      inset: 34px 0 96px 0;
+      grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+      grid-auto-rows: 92px;
+      justify-content: stretch;
+    }
+
+    .win {
+      inset: 40px 8px 100px 8px !important;
+      width: auto !important;
+      height: auto !important;
+      transform: none !important;
+    }
+
+    .titlebar { cursor: default; }
+    .titlebar .name { padding-right: 44px; }
+    .dock { bottom: 10px; border-radius: 17px; }
+    .dock button { width: 42px; height: 42px; }
+    .tagline { font-size: var(--s3); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .dock button:hover, .btn:hover, .icon:hover { transform: none; }
+  }
+</style>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<div class="wallpaper" aria-hidden="true">
+  <span class="w1"></span><span class="w2"></span><span class="w3"></span><span class="w4"></span>
+</div>
+<canvas id="sparkles" aria-hidden="true"></canvas>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c0-3.8 3.4-6 7.5-6s7.5 2.2 7.5 6"/>
+  </symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 7.5a2 2 0 0 1 2-2h3.6l1.8 2.2H19a2 2 0 0 1 2 2v7.8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+  </symbol>
+  <symbol id="i-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/>
+  </symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.5 13.8 9 19.5 10.8 13.8 12.6 12 18.2 10.2 12.6 4.5 10.8 10.2 9z"/>
+    <path d="M18.5 16.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>
+  </symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="9.5" r="5.5"/><path d="M8.5 14.5 7 21l5-2.4L17 21l-1.5-6.5"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 7 8.4 6 8.4-6"/>
+  </symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 3.5h8l4.5 4.5v12a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5v-15A1.5 1.5 0 0 1 6 3.5z"/><path d="M14 3.5V8h4.5"/>
+  </symbol>
+</svg>
+
+<div class="menubar">
+  <span class="os">YasmineOS</span>
+  <span class="item">Data Science &amp; NLP</span>
+  <span class="spacer"></span>
+  <button id="theme-toggle" type="button" aria-label="Switch theme">◐</button>
+  <span id="clock">--:--</span>
+</div>
+
+<main class="desktop" id="desktop"></main>
+
+<!-- ============ windows ============ -->
+
+<section class="win" id="win-about" data-title="About Me" data-w="480" data-h="440" data-x="120" data-y="80" role="dialog" aria-label="About Me">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">About Me</span>
+  </div>
+  <div class="win-body">
+    <div class="stack-col">
+      <div>
+        <h2>Hi, I'm Yasmine 🎀</h2>
+        <p class="lede">Data science student in Tunis, graduating September 2026.</p>
+      </div>
+      <p class="tagline">I teach machines to <span class="a">read</span>, <span class="b">listen</span>, and <span class="c">see</span>.</p>
+      <p class="lede">
+        I specialise in NLP and applied machine learning — turning documents
+        into answers, voices into sentiment, and scans into diagnoses. Right
+        now I'm building an AI-driven e-learning platform as my final-year
+        project.
+      </p>
+      <ul class="chips">
+        <li>Esprit School of Engineering</li>
+        <li>B.Eng. Computer Science</li>
+        <li>Tunis, Tunisia</li>
+      </ul>
+      <div class="btn-row">
+        <button class="btn pri" type="button" data-open="win-projects">See my work</button>
+        <a class="btn" href="https://github.com/yasmineajailia">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/yasmine-laajailia/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-projects" data-title="Projects" data-w="520" data-h="470" data-x="330" data-y="150" role="dialog" aria-label="Projects">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Projects</span>
+  </div>
+  <div class="win-body">
+    <div class="stack-col">
+      <p class="lede">Six projects, one problem shape — messy human input in, something you can act on out. Click any to open it.</p>
+      <div class="files">
+        <button class="file" type="button" data-open="win-nextlearn" style="--tint: var(--c-mint);">
+          <span class="fglyph"><svg><use href="#i-spark"/></svg></span>
+          <span class="fmeta"><span class="fname">NEXTLEARN</span><span class="fdesc">Course activity → who needs help, and why</span></span>
+          <span class="fbadge">Live</span>
+        </button>
+        <button class="file" type="button" data-open="win-verbot" style="--tint: var(--c-blue);">
+          <span class="fglyph"><svg><use href="#i-file"/></svg></span>
+          <span class="fmeta"><span class="fname">VERBOT</span><span class="fdesc">PDFs → grounded answers</span></span>
+          <span class="fbadge">Shipped</span>
+        </button>
+        <button class="file" type="button" data-open="win-ats" style="--tint: var(--c-peach);">
+          <span class="fglyph"><svg><use href="#i-file"/></svg></span>
+          <span class="fmeta"><span class="fname">ATS Agent</span><span class="fdesc">Résumés → match scores</span></span>
+        </button>
+        <button class="file" type="button" data-open="win-prime" style="--tint: var(--c-pink);">
+          <span class="fglyph"><svg><use href="#i-file"/></svg></span>
+          <span class="fmeta"><span class="fname">Prime Guide</span><span class="fdesc">Briefs → campaign assets</span></span>
+        </button>
+        <button class="file" type="button" data-open="win-tumor" style="--tint: var(--c-violet);">
+          <span class="fglyph"><svg><use href="#i-file"/></svg></span>
+          <span class="fmeta"><span class="fname">Tumor Classification</span><span class="fdesc">MRI scans → diagnoses</span></span>
+        </button>
+        <button class="file" type="button" data-open="win-emotion" style="--tint: var(--c-lilac);">
+          <span class="fglyph"><svg><use href="#i-file"/></svg></span>
+          <span class="fmeta"><span class="fname">Emotion Recognition</span><span class="fdesc">Audio → sentiment</span></span>
+        </button>
+      </div>
+      <p class="note">
+        Also on GitHub:
+        <a href="https://github.com/yasmineajailia/EcoPlant">EcoPlant</a>,
+        <a href="https://github.com/yasmineajailia/Job_Prediction">Job_Prediction</a>,
+        <a href="https://github.com/yasmineajailia/skin-type-classification">skin-type-classification</a>,
+        <a href="https://github.com/yasmineajailia/Data-Cleaning-using-sql">Data-Cleaning-using-sql</a>,
+        <a href="https://github.com/yasmineajailia/WebApp-using-Symfony">WebApp-using-Symfony</a>,
+        <a href="https://github.com/yasmineajailia/game-dev-1A7">game-dev-1A7</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-nextlearn" data-title="NEXTLEARN" data-w="500" data-h="480" data-x="380" data-y="110" style="--tint: var(--c-mint);" role="dialog" aria-label="NEXTLEARN">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">NEXTLEARN</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>NEXTLEARN</h2>
+      <p class="transform"><span>Course activity</span><span class="arrow">→</span><span class="out">who needs help, and why</span></p>
+      <p class="lede">
+        An e-learning platform for Esprit's C programming course that watches
+        how students actually work and intervenes before they fall behind. A
+        model forecasts dropout risk and exam performance; SHAP explains every
+        prediction, so a tutor sees the reasoning rather than a bare score.
+        Alongside it: a RAG chatbot answering only from course material,
+        VARK-based learning-style recommendations, and webcam attention
+        tracking that runs entirely in the browser — no images ever leave the
+        student's device.
+      </p>
+      <ul class="chips">
+        <li>TypeScript</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Python</li><li>SHAP</li><li>RAG</li>
+      </ul>
+      <ul class="metrics">
+        <li><span class="fig">72–76%</span><span class="cap">Risk-model accuracy</span></li>
+        <li><span class="fig">0.81–0.84</span><span class="cap">AUC</span></li>
+        <li><span class="fig">On-device</span><span class="cap">Attention tracking</span></li>
+      </ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/NEXTLEARN">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-verbot" data-title="VERBOT" data-w="480" data-h="410" data-x="400" data-y="140" style="--tint: var(--c-blue);" role="dialog" aria-label="VERBOT">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">VERBOT</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>VERBOT</h2>
+      <p class="transform"><span>PDFs</span><span class="arrow">→</span><span class="out">grounded answers</span></p>
+      <p class="lede">
+        A retrieval-augmented chatbot answering questions about Vermeg's
+        financial products, built and deployed to the company's internal
+        platform during my internship there. An embedding cache cuts cold start
+        from 30 seconds to about two, and it answers in both English and French.
+      </p>
+      <ul class="chips">
+        <li>RAG</li><li>Gemini 2.0 Flash</li><li>SentenceTransformers</li><li>FastAPI</li><li>Docker</li>
+      </ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/vermeg-chatbot">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-ats" data-title="ATS Agent" data-w="470" data-h="390" data-x="420" data-y="170" style="--tint: var(--c-peach);" role="dialog" aria-label="ATS Agent">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">ATS Agent</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>ATS Agent</h2>
+      <p class="transform"><span>Résumés</span><span class="arrow">→</span><span class="out">match scores</span></p>
+      <p class="lede">
+        Scores how well a résumé matches a job description, detecting 200+
+        technical and professional competencies. Combines Jaccard, cosine and
+        weighted similarity into a single readable verdict, then explains which
+        skills are missing and why.
+      </p>
+      <ul class="chips"><li>spaCy</li><li>scikit-learn</li><li>TF-IDF</li><li>Streamlit</li></ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/ATS_AGENT">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-prime" data-title="Prime Guide" data-w="470" data-h="380" data-x="440" data-y="200" style="--tint: var(--c-pink);" role="dialog" aria-label="Prime Guide">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Prime Guide</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>Prime Guide</h2>
+      <p class="transform"><span>Briefs</span><span class="arrow">→</span><span class="out">campaign assets</span></p>
+      <p class="lede">
+        A multimodal marketing assistant for small businesses, generating social
+        content across text, image, voice and video from a short prompt. Built
+        on Hugging Face models with separate generator and trainer modules.
+      </p>
+      <ul class="chips"><li>Transformers</li><li>Hugging Face</li><li>Multimodal</li><li>Python</li></ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Content-Generation">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-tumor" data-title="Tumor Classification" data-w="470" data-h="370" data-x="460" data-y="130" style="--tint: var(--c-violet);" role="dialog" aria-label="Tumor Classification">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Tumor Classification</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>Tumor Classification</h2>
+      <p class="transform"><span>MRI scans</span><span class="arrow">→</span><span class="out">diagnoses</span></p>
+      <p class="lede">
+        A CNN with transfer learning that classifies brain tumors from MRI
+        scans, beating the from-scratch baseline by reusing pretrained visual
+        features on a small medical dataset.
+      </p>
+      <ul class="chips"><li>CNN</li><li>Transfer learning</li><li>Jupyter</li></ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Cancer-Detection">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-emotion" data-title="Emotion Recognition" data-w="470" data-h="370" data-x="480" data-y="160" style="--tint: var(--c-lilac);" role="dialog" aria-label="Emotion Recognition">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Emotion Recognition</span>
+  </div>
+  <div class="win-body">
+    <div class="flow">
+      <h2>Emotion Recognition</h2>
+      <p class="transform"><span>Audio</span><span class="arrow">→</span><span class="out">sentiment</span></p>
+      <p class="lede">
+        Classifies sentiment from speech rather than text, reading tone and
+        voice features directly from the waveform — useful where what someone
+        says and how they say it disagree.
+      </p>
+      <ul class="chips"><li>Audio features</li><li>Deep learning</li><li>Jupyter</li></ul>
+      <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Emotion-Recognition">View on GitHub</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-experience" data-title="Experience" data-w="520" data-h="480" data-x="200" data-y="100" role="dialog" aria-label="Experience">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Experience</span>
+  </div>
+  <div class="win-body">
+    <div class="stack-col">
+      <article class="role">
+        <p class="when">Mar – Sep 2026 <span class="now">Current</span></p>
+        <h3>Data Science Intern</h3>
+        <p class="where">Esprit School of Engineering — Tunis</p>
+        <ul>
+          <li>Building NEXTLEARN, an AI-driven e-learning platform for Esprit's C programming course, as my end-of-studies project.</li>
+          <li>Trained a risk model forecasting student dropout and exam performance at 72–76% accuracy (AUC 0.81–0.84), with SHAP explanations so tutors can see why a student was flagged.</li>
+          <li>Built a RAG chatbot grounded strictly in course material, plus VARK-based learning-style recommendations.</li>
+          <li>Implemented webcam attention monitoring processed entirely browser-side, keeping student video off the server.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <p class="when">Jul – Sep 2025</p>
+        <h3>Data Science Intern</h3>
+        <p class="where">Vermeg — Tunis</p>
+        <ul>
+          <li>Designed and implemented an internal RAG chatbot answering company-specific questions with high accuracy.</li>
+          <li>Built a semantic search layer over vector embeddings to retrieve the right internal documents.</li>
+          <li>Fine-tuned an LLM on proprietary data to sharpen contextual understanding.</li>
+          <li>Deployed to the internal platform, cutting the time employees spend chasing answers.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <p class="when">Jun – Aug 2024</p>
+        <h3>Full Stack Developer Intern</h3>
+        <p class="where">LittleWolf.tech — Tunis</p>
+        <ul>
+          <li>Built a real-time chat application on React, Node.js and MongoDB.</li>
+          <li>Implemented authentication, message persistence, and responsive UI.</li>
+          <li>Integrated WebSockets for bidirectional client–server communication.</li>
+          <li>Tested, debugged and deployed alongside a small team.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-skills" data-title="Skills" data-w="500" data-h="420" data-x="260" data-y="130" role="dialog" aria-label="Skills">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Skills</span>
+  </div>
+  <div class="win-body">
+    <div class="skill-grid">
+      <div class="skill" style="--tint: var(--c-mint);"><h3>ML &amp; Deep Learning</h3><p>Supervised &amp; unsupervised learning, CNNs, RNNs, Transformers</p></div>
+      <div class="skill" style="--tint: var(--c-blue);"><h3>NLP</h3><p>Text mining, sentiment analysis, named entity recognition, LLMs</p></div>
+      <div class="skill" style="--tint: var(--c-peach);"><h3>Analytics &amp; Statistics</h3><p>Predictive modeling, hypothesis testing, regression, time series forecasting</p></div>
+      <div class="skill" style="--tint: var(--c-pink);"><h3>Programming &amp; Data</h3><p>Python, R, SQL, MongoDB, MySQL, Cassandra</p></div>
+      <div class="skill" style="--tint: var(--c-violet);"><h3>Visualization &amp; BI</h3><p>Tableau, Power BI, Matplotlib, Seaborn, Plotly</p></div>
+      <div class="skill" style="--tint: var(--c-lilac);"><h3>MLOps &amp; Engineering</h3><p>Data pipelines, feature engineering, model deployment, Docker, MLflow, Airflow</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-credentials" data-title="Credentials" data-w="440" data-h="400" data-x="300" data-y="160" role="dialog" aria-label="Credentials">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Credentials</span>
+  </div>
+  <div class="win-body">
+    <div class="stack-col">
+      <div>
+        <h3>Certifications</h3>
+        <ul class="certs" style="margin-top: 0.6rem;">
+          <li><span>AWS Certified Cloud Practitioner</span><span class="issuer">Amazon Web Services · 2025</span></li>
+          <li><span>Natural Language Processing Fundamentals</span><span class="issuer">NVIDIA Deep Learning Institute · 2025</span></li>
+          <li><span>Hashgraph Developer Course</span><span class="issuer">Hedera / Hashgraph Association · 2025</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <ul class="certs" style="margin-top: 0.6rem;">
+          <li><span>Arabic</span><span class="issuer">Native</span></li>
+          <li><span>English</span><span class="issuer">B2</span></li>
+          <li><span>French</span><span class="issuer">B2</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="win" id="win-contact" data-title="Contact" data-w="440" data-h="470" data-x="340" data-y="120" role="dialog" aria-label="Contact">
+  <div class="titlebar">
+    <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
+    <span class="name">Contact</span>
+  </div>
+  <div class="win-body">
+    <div class="stack-col">
+      <div>
+        <h2>Let's talk</h2>
+        <p class="lede">Graduating September 2026 and looking for data science work.</p>
+      </div>
+      <!--
+        This form opens the visitor's own mail app with the message
+        pre-composed, so it needs no server and works anywhere.
+
+        To deliver straight to your inbox instead, host this page yourself
+        (GitHub Pages, Netlify) and sign up for a free service such as
+        Formspree, then replace the <form> tag below with:
+            <form action="https://formspree.io/f/YOUR_ID" method="POST">
+        and delete the contact-form block in the <script> at the bottom.
+      -->
+      <form id="contact-form" class="stack-col" style="gap: 0.75rem;">
+        <div class="field">
+          <label for="cf-name">Your name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="cf-email">Your email</label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" required></textarea>
+        </div>
+        <button class="btn pri" type="submit" style="align-self:flex-start;">Compose email</button>
+        <p class="note">
+          Opens in your own mail app, addressed to me. Or write directly:
+          <a href="mailto:ajailiayasmine@gmail.com">ajailiayasmine@gmail.com</a>
+        </p>
+        <p class="sent" id="cf-sent" hidden role="status">
+          Your mail app should have opened with the message ready to send. If
+          nothing happened, email me directly at the address above.
+        </p>
+      </form>
+      <div class="btn-row">
+        <a class="btn" href="https://github.com/yasmineajailia">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/yasmine-laajailia/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="dock" id="dock" aria-label="Open windows"></nav>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mobile = function () { return window.matchMedia('(max-width: 760px)').matches; };
+
+  /* ---------- apps shown on the desktop and in the dock ---------- */
+  var APPS = [
+    { id: 'win-about',       label: 'About Me',    icon: 'i-user',   tint: 'var(--c-pink)'   },
+    { id: 'win-projects',    label: 'Projects',    icon: 'i-folder', tint: 'var(--c-lilac)'  },
+    { id: 'win-experience',  label: 'Experience',  icon: 'i-case',   tint: 'var(--c-blue)'   },
+    { id: 'win-skills',      label: 'Skills',      icon: 'i-spark',  tint: 'var(--c-mint)'   },
+    { id: 'win-credentials', label: 'Credentials', icon: 'i-badge',  tint: 'var(--c-peach)'  },
+    { id: 'win-contact',     label: 'Contact',     icon: 'i-mail',   tint: 'var(--c-violet)' }
+  ];
+
+  var desktop = document.getElementById('desktop');
+  var dock = document.getElementById('dock');
+  var z = 10;
+
+  function svg(id) {
+    return '<svg aria-hidden="true"><use href="#' + id + '"/></svg>';
+  }
+
+  APPS.forEach(function (app) {
+    var b = document.createElement('button');
+    b.className = 'icon';
+    b.type = 'button';
+    b.style.setProperty('--tint', app.tint);
+    b.innerHTML = '<span class="glyph">' + svg(app.icon) + '</span><span class="label">' + app.label + '</span>';
+    b.addEventListener('click', function () { open(app.id); });
+    desktop.appendChild(b);
+
+    var d = document.createElement('button');
+    d.type = 'button';
+    d.style.setProperty('--tint', app.tint);
+    d.setAttribute('aria-label', app.label);
+    d.dataset.win = app.id;
+    d.innerHTML = svg(app.icon) + '<span class="tip">' + app.label + '</span>';
+    d.addEventListener('click', function () { toggle(app.id); });
+    dock.appendChild(d);
+  });
+
+  /* ---------- window manager ---------- */
+
+  function win(id) { return document.getElementById(id); }
+
+  function place(w) {
+    if (mobile() || w.dataset.placed) return;
+    var vw = window.innerWidth, vh = window.innerHeight;
+    var ww = Math.min(parseInt(w.dataset.w, 10), vw - 40);
+    var wh = Math.min(parseInt(w.dataset.h, 10), vh - 150);
+    var x = Math.min(parseInt(w.dataset.x, 10), Math.max(20, vw - ww - 20));
+    var y = Math.min(parseInt(w.dataset.y, 10), Math.max(44, vh - wh - 110));
+    w.style.width = ww + 'px';
+    w.style.height = wh + 'px';
+    w.style.left = Math.max(10, x) + 'px';
+    w.style.top = Math.max(40, y) + 'px';
+    w.dataset.placed = '1';
+  }
+
+  function focus(w) { w.style.zIndex = ++z; }
+
+  function open(id) {
+    var w = win(id);
+    if (!w) return;
+    place(w);
+    w.classList.add('open');
+    focus(w);
+    syncDock();
+    var body = w.querySelector('.win-body');
+    if (body) body.scrollTop = 0;
+  }
+
+  function close(id) {
+    var w = win(id);
+    if (!w) return;
+    w.classList.remove('open');
+    syncDock();
+  }
+
+  function toggle(id) {
+    var w = win(id);
+    if (!w) return;
+    if (w.classList.contains('open') && w.style.zIndex == z) close(id);
+    else open(id);
+  }
+
+  function syncDock() {
+    Array.prototype.forEach.call(dock.children, function (b) {
+      var w = win(b.dataset.win);
+      b.dataset.active = w && w.classList.contains('open') ? 'true' : 'false';
+    });
+  }
+
+  /* buttons inside windows that open other windows */
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-open]');
+    if (t && t.dataset.open) { open(t.dataset.open); }
+  });
+
+  /* per-window chrome: close / minimise / zoom / focus / drag */
+  Array.prototype.forEach.call(document.querySelectorAll('.win'), function (w) {
+    var bar = w.querySelector('.titlebar');
+
+    w.addEventListener('pointerdown', function () { focus(w); });
+
+    w.querySelector('.close').addEventListener('click', function (e) { e.stopPropagation(); close(w.id); });
+    w.querySelector('.min').addEventListener('click',   function (e) { e.stopPropagation(); close(w.id); });
+
+    w.querySelector('.zoom').addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (mobile()) return;
+      if (w.dataset.zoomed) {
+        w.style.left = w.dataset.pl; w.style.top = w.dataset.pt;
+        w.style.width = w.dataset.pw; w.style.height = w.dataset.ph;
+        delete w.dataset.zoomed;
+      } else {
+        w.dataset.pl = w.style.left; w.dataset.pt = w.style.top;
+        w.dataset.pw = w.style.width; w.dataset.ph = w.style.height;
+        w.style.left = '16px'; w.style.top = '44px';
+        w.style.width = (window.innerWidth - 32) + 'px';
+        w.style.height = (window.innerHeight - 130) + 'px';
+        w.dataset.zoomed = '1';
+      }
+    });
+
+    var dx = 0, dy = 0, dragging = false;
+
+    bar.addEventListener('pointerdown', function (e) {
+      if (mobile() || e.target.closest('button')) return;
+      dragging = true;
+      dx = e.clientX - w.offsetLeft;
+      dy = e.clientY - w.offsetTop;
+      bar.setPointerCapture(e.pointerId);
+      focus(w);
+    });
+
+    bar.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var maxX = window.innerWidth - 60;
+      var maxY = window.innerHeight - 60;
+      w.style.left = Math.min(Math.max(e.clientX - dx, -w.offsetWidth + 90), maxX) + 'px';
+      w.style.top  = Math.min(Math.max(e.clientY - dy, 36), maxY) + 'px';
+    });
+
+    function end(e) {
+      if (!dragging) return;
+      dragging = false;
+      try { bar.releasePointerCapture(e.pointerId); } catch (err) {}
+    }
+    bar.addEventListener('pointerup', end);
+    bar.addEventListener('pointercancel', end);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var top = null;
+    Array.prototype.forEach.call(document.querySelectorAll('.win.open'), function (w) {
+      if (!top || (+w.style.zIndex || 0) >= (+top.style.zIndex || 0)) top = w;
+    });
+    if (top) close(top.id);
+  });
+
+  /* ---------- clock ---------- */
+  var clock = document.getElementById('clock');
+  function tick() {
+    var d = new Date();
+    clock.textContent = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+  tick();
+  setInterval(tick, 20000);
+
+  /* ---------- theme toggle ---------- */
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var r = document.documentElement;
+    var dark = r.getAttribute('data-theme') === 'dark'
+      || (!r.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    r.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+
+  /* ---------- sparkles ---------- */
+  (function () {
+    var c = document.getElementById('sparkles');
+    if (!c || !c.getContext) return;
+    var ctx = c.getContext('2d'), stars = [], W = 0, H = 0;
+
+    function size() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth; H = window.innerHeight;
+      c.width = W * dpr; c.height = H * dpr;
+      c.style.width = W + 'px'; c.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      stars = [];
+      var n = Math.round(Math.min(W, 1400) / 22);
+      for (var i = 0; i < n; i++) {
+        stars.push({
+          x: Math.random() * W, y: Math.random() * H,
+          r: 0.7 + Math.random() * 1.7,
+          t: Math.random() * Math.PI * 2,
+          s: 0.4 + Math.random() * 0.9
+        });
+      }
+    }
+
+    function paint() {
+      ctx.clearRect(0, 0, W, H);
+      var light = !(document.documentElement.getAttribute('data-theme') === 'dark'
+        || (!document.documentElement.getAttribute('data-theme')
+            && window.matchMedia('(prefers-color-scheme: dark)').matches));
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        s.t += 0.02 * s.s;
+        var a = (Math.sin(s.t) * 0.5 + 0.5) * (light ? 0.5 : 0.75);
+        ctx.globalAlpha = a;
+        ctx.fillStyle = light ? '#FFFFFF' : '#FFE9F6';
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function loop() { paint(); requestAnimationFrame(loop); }
+
+    size();
+    window.addEventListener('resize', size);
+    if (reduce) paint(); else loop();
+  })();
+
+  /* ---------- contact form → mailto ---------- */
+  var form = document.getElementById('contact-form');
+  if (form && !form.getAttribute('action')) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.elements.name.value.trim();
+      var from = form.elements.email.value.trim();
+      var body = form.elements.message.value.trim();
+      window.location.href = 'mailto:ajailiayasmine@gmail.com'
+        + '?subject=' + encodeURIComponent('Portfolio enquiry from ' + name)
+        + '&body=' + encodeURIComponent(body + '\n\n—\n' + name + '\n' + from);
+      document.getElementById('cf-sent').hidden = false;
+    });
+  }
+
+  /* ---------- boot ---------- */
+  open('win-about');
+  if (!mobile()) setTimeout(function () { open('win-projects'); }, 380);
+})();
+</script>
