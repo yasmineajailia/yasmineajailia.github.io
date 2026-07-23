@@ -6,16 +6,6 @@ operating system.
 
 **Live:** https://yasmineajailia.github.io/portfolio/
 
-## Contents
-
-| Window | What's in it |
-| --- | --- |
-| About Me | Intro, education, quick links |
-| Projects | NEXTLEARN, VERBOT, ATS Agent, Prime Guide, Tumor Classification, Emotion Recognition |
-| Experience | Esprit, Vermeg, LittleWolf.tech |
-| Skills | ML/DL, NLP, analytics, databases, BI, MLOps |
-| Credentials | AWS, NVIDIA, Hedera certifications and languages |
-| Contact | Email, GitHub, LinkedIn, and a message form |
 
 ## Built with
 
