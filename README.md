@@ -4,7 +4,7 @@ An interactive desktop-style portfolio: draggable windows, a dock, and a
 soft animated wallpaper. Data science and NLP work, presented as a small
 operating system.
 
-**Live:** https://yasmineajailia.github.io/portfolio/
+**Live:** [https://yasmineajailia.github.io/portfolio/](https://yasmineajailia.github.io/)
 
 
 ## Built with
