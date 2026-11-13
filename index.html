@@ -1,77 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yasmine Laajailia — Data Science & NLP</title>
+  <title>Yasmine Laajailia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAFAF9;
-      --bg-card: #FFFFFF;
-      --bg-card-subtle: #F5F5F4;
-      --ink: #1C1917;
-      --ink-soft: #57534E;
-      --ink-muted: #A8A29E;
-      --border: #E7E5E4;
-      --border-focus: #D6D3D1;
-
-      --accent: #E11D48;
-      --accent-soft: rgba(225, 29, 72, 0.08);
-      --accent-hover: #BE123C;
-
-      --c-mint: #0D9488;
-      --c-blue: #2563EB;
-      --c-peach: #EA580C;
-      --c-pink: #E11D48;
-      --c-violet: #7C3AED;
-      --c-lilac: #9333EA;
-
-      --radius: 16px;
-      --radius-sm: 10px;
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
-      --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
-      --shadow-lg: 0 20px 35px -8px rgba(0, 0, 0, 0.1), 0 10px 15px -4px rgba(0, 0, 0, 0.04);
-      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #FBFBFA;
+      --bg-subtle: #F4F4F2;
+      --text: #191918;
+      --text-muted: #6E6D6A;
+      --text-light: #9B9A97;
+      --border: #E6E6E3;
+      --border-dark: #C9C8C5;
+      --link: #191918;
+      --link-hover: #000000;
+      
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
     }
 
     [data-theme="dark"] {
-      --bg: #0C0A09;
-      --bg-card: #1C1917;
-      --bg-card-subtle: #292524;
-      --ink: #FAFAF9;
-      --ink-soft: #D6D3D1;
-      --ink-muted: #78716C;
-      --border: #292524;
-      --border-focus: #44403C;
-
-      --accent: #FB7185;
-      --accent-soft: rgba(251, 113, 133, 0.12);
-      --accent-hover: #FDA4AF;
-
-      --c-mint: #2DD4BF;
-      --c-blue: #60A5FA;
-      --c-peach: #FB923C;
-      --c-pink: #FB7185;
-      --c-violet: #A78BFA;
-      --c-lilac: #C084FC;
-
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 20px 35px -8px rgba(0, 0, 0, 0.6);
+      --bg: #141413;
+      --bg-subtle: #1E1E1C;
+      --text: #EEEEEC;
+      --text-muted: #9E9D99;
+      --text-light: #6E6D69;
+      --border: #2B2A27;
+      --border-dark: #44423E;
+      --link: #EEEEEC;
+      --link-hover: #FFFFFF;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
@@ -79,667 +44,375 @@
 
     body {
       background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-sans);
-      line-height: 1.6;
+      color: var(--text);
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      padding: 0;
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: background 0.15s ease, color 0.15s ease;
     }
 
     .container {
-      max-width: 1040px;
+      max-width: 680px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    /* ---------- Header / Nav ---------- */
+    /* ---------- Header ---------- */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: color-mix(in srgb, var(--bg) 80%, transparent);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-      padding: 1.1rem 0;
-    }
-
-    .nav-inner {
+      padding: 3rem 0 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
     }
 
-    .brand {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .site-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.01em;
     }
 
-    .brand-badge {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .nav-actions {
+    .header-links {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
       display: flex;
       align-items: center;
       gap: 1.25rem;
     }
 
-    .nav-link {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--ink-soft);
+    .header-links a {
+      color: var(--text-muted);
       text-decoration: none;
       transition: color 0.15s ease;
     }
 
-    .nav-link:hover {
-      color: var(--ink);
+    .header-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
     }
 
-    .theme-btn {
+    .theme-toggle {
       background: none;
-      border: 1px solid var(--border);
-      color: var(--ink-soft);
-      border-radius: 999px;
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
-    }
-
-    .theme-btn:hover {
-      background: var(--bg-card-subtle);
-      color: var(--ink);
-    }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      padding: 5rem 0 3.5rem;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 0.3rem 0.85rem;
-      border-radius: 999px;
+      border: none;
+      font-family: var(--font-sans);
       font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--ink-soft);
-      margin-bottom: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--c-mint);
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-mint) 25%, transparent);
-    }
-
-    .hero-title {
-      font-size: clamp(2.3rem, 5.5vw, 3.6rem);
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-      color: var(--ink);
-    }
-
-    .hero-tagline {
-      font-size: clamp(1.2rem, 2.8vw, 1.6rem);
-      font-weight: 600;
-      color: var(--ink-soft);
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-tagline .highlight {
-      color: var(--accent);
-    }
-
-    .hero-bio {
-      font-size: 1.05rem;
-      color: var(--ink-soft);
-      max-width: 640px;
-      line-height: 1.65;
-      margin-bottom: 2rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
+      color: var(--text-light);
       cursor: pointer;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--ink);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      padding: 0;
+      transition: color 0.15s;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-focus);
+    .theme-toggle:hover {
+      color: var(--text);
     }
 
-    .btn-primary {
-      background: var(--ink);
-      color: var(--bg);
-      border-color: var(--ink);
+    /* ---------- Intro Section ---------- */
+    .intro {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .btn-primary:hover {
-      background: var(--ink-soft);
-      color: var(--bg);
-      border-color: var(--ink-soft);
-    }
-
-    /* Key stats bar */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 3.5rem 0 1rem;
-      padding: 1.5rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .stat-num {
+    .intro-lead {
       font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-
-    .stat-label {
-      font-size: 0.82rem;
-      color: var(--ink-muted);
-    }
-
-    /* ---------- Projects Section ---------- */
-    .section-header {
-      margin: 4.5rem 0 2rem;
-    }
-
-    .section-title {
-      font-size: 1.85rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      margin-bottom: 0.4rem;
-    }
-
-    .section-desc {
-      font-size: 0.95rem;
-      color: var(--ink-muted);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 1.35rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1.2rem;
-      cursor: pointer;
-      position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow: var(--shadow-sm);
-      text-align: left;
-    }
-
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-      border-color: color-mix(in srgb, var(--card-tint, var(--accent)) 40%, var(--border));
-    }
-
-    .project-card:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .badge-demo {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--card-tint, var(--accent)) 12%, transparent);
-      color: var(--card-tint, var(--accent));
-      border: 1px solid color-mix(in srgb, var(--card-tint, var(--accent)) 25%, transparent);
-    }
-
-    .card-transform {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--ink-soft);
-      background: var(--bg-card-subtle);
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      align-self: flex-start;
-    }
-
-    .card-transform .arrow {
-      color: var(--card-tint, var(--accent));
-    }
-
-    .card-desc {
-      font-size: 0.9rem;
-      color: var(--ink-soft);
+      font-style: italic;
+      color: var(--text);
       line-height: 1.55;
+      margin-bottom: 1.5rem;
     }
 
-    .card-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      list-style: none;
-    }
-
-    .card-chips li {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--ink-muted);
-      background: var(--bg-card-subtle);
-      padding: 0.18rem 0.55rem;
-      border-radius: 6px;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--card-tint, var(--accent));
-    }
-
-    .card-arrow {
-      transition: transform 0.15s ease;
-    }
-
-    .project-card:hover .card-arrow {
-      transform: translateX(3px);
-    }
-
-    /* ---------- Experience Section ---------- */
-    .experience-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .experience-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.6rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .exp-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .exp-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--ink);
-    }
-
-    .exp-date {
-      font-size: 0.82rem;
-      color: var(--ink-muted);
-      font-weight: 500;
-      font-family: var(--font-mono);
-    }
-
-    .exp-company {
-      font-size: 0.9rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-    }
-
-    .exp-points {
-      padding-left: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-    }
-
-    /* ---------- Skills / Certs Section ---------- */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .skill-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.2rem 1.4rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .skill-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-
-    .skill-text {
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-    }
-
-    /* ---------- Contact ---------- */
-    .contact-box {
-      margin: 4.5rem 0 5rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-md);
-      text-align: center;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-box h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-box p {
-      font-size: 1rem;
-      color: var(--ink-soft);
+    .intro-body {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.75;
       margin-bottom: 1.75rem;
     }
 
-    .contact-box .btn-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
-      text-align: center;
+    .meta-list {
+      font-family: var(--font-sans);
       font-size: 0.85rem;
-      color: var(--ink-muted);
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      list-style: none;
     }
 
-    /* ---------- MODAL (Project Case Studies & Demos) ---------- */
+    .meta-list li strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ---------- Headings ---------- */
+    h2.section-heading {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin: 3.5rem 0 1.5rem;
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .section-counter {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    /* ---------- Projects List ---------- */
+    .project-entry {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .project-entry:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .project-entry:hover .project-title {
+      text-decoration: underline;
+    }
+
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .project-summary {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-tech {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-light);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .project-tech li::after {
+      content: "·";
+      margin-left: 0.5rem;
+    }
+
+    .project-tech li:last-child::after {
+      content: "";
+    }
+
+    /* ---------- Experience / Resume ---------- */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-role {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    .timeline-org {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-notes {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      padding-left: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- Technical Skills / Notes ---------- */
+    .skills-block {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .skills-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    .skills-label {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .skills-content {
+      color: var(--text);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 4rem 0 3rem;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--text-light);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    /* ---------- Modal Dialog ---------- */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      z-index: 200;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      z-index: 100;
+      background: rgba(20, 20, 19, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
-      overflow-y: auto;
+      padding: 1.25rem;
     }
 
     .modal-backdrop.open {
       display: flex;
-      animation: fadeIn 0.2s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
     }
 
     .modal-window {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
+      background: var(--bg);
+      border: 1px solid var(--border-dark);
       width: 100%;
-      max-width: 780px;
-      max-height: 90vh;
+      max-width: 680px;
+      max-height: 88vh;
       display: flex;
       flex-direction: column;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      animation: popIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
-    }
-
-    @keyframes popIn {
-      from {
-        transform: scale(0.95) translateY(12px);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1) translateY(0);
-        opacity: 1;
-      }
+      box-shadow: 0 12px 36px rgba(0,0,0,0.15);
     }
 
     .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 1.6rem;
+      padding: 1.25rem 1.5rem;
       border-bottom: 1px solid var(--border);
-      background: var(--bg-card);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .modal-title-wrap {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.6rem;
+      background: var(--bg);
     }
 
     .modal-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--ink);
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--text);
     }
 
     .modal-close {
-      background: var(--bg-card-subtle);
-      border: 1px solid var(--border);
-      color: var(--ink-soft);
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--text-muted);
       cursor: pointer;
-      font-size: 1rem;
-      line-height: 1;
-      transition: background 0.15s, color 0.15s;
+      padding: 0.2rem 0.5rem;
     }
 
     .modal-close:hover {
-      background: var(--border);
-      color: var(--ink);
+      color: var(--text);
+      text-decoration: underline;
     }
 
     .modal-body {
-      padding: 1.8rem;
+      padding: 1.75rem 1.5rem;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      gap: 1.8rem;
-    }
-
-    .modal-hero {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .modal-transform {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      align-self: flex-start;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.28rem 0.75rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    .modal-lede {
-      font-size: 1rem;
-      color: var(--ink-soft);
-      line-height: 1.6;
-    }
-
-    .modal-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      list-style: none;
-    }
-
-    .modal-chips li {
-      font-size: 0.78rem;
-      font-weight: 600;
-      background: var(--bg-card-subtle);
-      color: var(--ink-soft);
-      padding: 0.22rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-    }
-
-    /* Demo video player */
-    .modal-demo {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .modal-demo h4 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      font-weight: 700;
+      gap: 1.5rem;
     }
 
     .modal-player {
       width: 100%;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
+      aspect-ratio: 16 / 9;
       background: #000;
       border: 1px solid var(--border);
-      aspect-ratio: 16 / 9;
     }
 
-    .modal-player video {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
+    .modal-player video,
     .modal-player iframe {
       width: 100%;
       height: 100%;
@@ -747,447 +420,264 @@
       display: block;
     }
 
-    /* Modal sections */
-    .modal-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-    }
-
-    .modal-section h4 {
-      font-size: 0.85rem;
+    .modal-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 0.4rem;
     }
 
-    .modal-section p,
-    .modal-section ul {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
+    .modal-text {
+      font-size: 1rem;
+      color: var(--text);
       line-height: 1.65;
     }
 
-    .modal-section ul {
-      padding-left: 1.2rem;
+    .modal-list {
+      font-size: 0.95rem;
+      color: var(--text);
+      padding-left: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .feature-card {
-      background: var(--bg-card-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.85rem 0.95rem;
-    }
-
-    .feature-card .fc-title {
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--ink);
-      margin-bottom: 0.2rem;
-    }
-
-    .feature-card .fc-desc {
-      font-size: 0.8rem;
-      color: var(--ink-soft);
-      line-height: 1.45;
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .impact-card {
-      text-align: center;
-      padding: 0.85rem 0.6rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-card-subtle);
-      border: 1px solid var(--border);
-    }
-
-    .impact-card .ic-fig {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--accent);
-      letter-spacing: -0.02em;
-    }
-
-    .impact-card .ic-cap {
-      font-size: 0.75rem;
-      color: var(--ink-muted);
-      margin-top: 0.15rem;
+      gap: 0.4rem;
+      line-height: 1.6;
     }
 
     .modal-footer {
-      padding: 1.2rem 1.6rem;
+      padding: 1rem 1.5rem;
       border-top: 1px solid var(--border);
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: flex-end;
-      gap: 0.8rem;
-      background: var(--bg-card);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      background: var(--bg);
     }
 
-    @media (max-width: 640px) {
-      .hero {
-        padding: 3.5rem 0 2rem;
-      }
+    .modal-footer a {
+      color: var(--text);
+      font-weight: 500;
+      text-decoration: underline;
+    }
 
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-bar {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-window {
-        border-radius: 16px;
-        max-height: 94vh;
-      }
-
-      .modal-body {
-        padding: 1.25rem;
-      }
+    @media (max-width: 600px) {
+      .skills-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .header-links { gap: 0.85rem; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <div class="container nav-inner">
-      <a href="#" class="brand">
-        <span class="brand-badge"></span>
-        Yasmine Laajailia
-      </a>
-      <div class="nav-actions">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button id="theme-btn" class="theme-btn" type="button" aria-label="Toggle dark mode">◑</button>
-      </div>
-    </div>
-  </header>
+  <div class="container">
+    <header>
+      <div class="site-title">Yasmine Laajailia</div>
+      <nav class="header-links">
+        <a href="#projects">Work</a>
+        <a href="#experience">Background</a>
+        <a href="#skills">Skills</a>
+        <a href="mailto:ajailiayasmine@gmail.com">Contact</a>
+        <button id="theme-btn" class="theme-toggle" type="button">Dark</button>
+      </nav>
+    </header>
 
-  <main class="container">
-    <!-- Hero / Introduction -->
-    <section class="hero">
+    <main>
+      <!-- Intro -->
+      <section class="intro">
+        <p class="intro-lead">
+          Computer Science engineer specializing in NLP and Applied Machine Learning.
+        </p>
+        <p class="intro-body">
+          I work on turning messy unstructured data into reliable, grounded systems — from document-based retrieval and explainable student risk modeling to speech emotion detection. Currently building an AI-assisted C programming educational platform at Esprit School of Engineering.
+        </p>
+        <ul class="meta-list">
+          <li><strong>Focus:</strong> NLP, RAG, Information Retrieval, Predictive Modeling</li>
+          <li><strong>Location:</strong> Tunis, Tunisia</li>
+          <li><strong>Links:</strong> <a href="https://github.com/yasmineajailia" target="_blank" rel="noopener">GitHub</a>, <a href="https://www.linkedin.com/in/yasmine-laajailia/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </section>
 
-      <p class="hero-tagline">Computer Science engineer specializing in <span class="highlight">NLP</span> & <span
-          class="highlight">Data Science</span>.</p>
-      <p class="hero-bio">
-        I bridge the gap between unstructured data and real-world utility, turning messy PDFs into grounded RAG answers,
-        student learning patterns into dropout forecasts, and audio waveforms into real-time emotion insights.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">Explore Projects ↓</a>
-        <a href="https://github.com/yasmineajailia" target="_blank" rel="noopener" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/yasmine-laajailia/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
-        <a href="mailto:ajailiayasmine@gmail.com" class="btn">Email Me</a>
-      </div>
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-heading">
+          Selected Projects
+          <span class="section-counter">06</span>
+        </h2>
 
-      <!-- Quick Metrics -->
-      <div class="stats-bar">
-        <div class="stat-item">
-          <span class="stat-num">Production RAG</span>
-          <span class="stat-label">Shipped at Vermeg for internal knowledge</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">72–76% Accuracy</span>
-          <span class="stat-label">Student risk modeling (AUC 0.81–0.84)</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">3× Certified</span>
-          <span class="stat-label">AWS · NVIDIA DLI · Hedera Hashgraph</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">Hand-picked case studies with live interactive demos and source code. Click any project
-          to view details & video demos.</p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: NEXTLEARN -->
-        <div class="project-card" style="--card-tint: var(--c-mint);" onclick="openProject('nextlearn')">
-          <div class="card-top">
-            <h3 class="card-title">NEXTLEARN</h3>
-            <span class="badge-demo">Video Demo</span>
+        <div class="project-entry" onclick="openProject('nextlearn')">
+          <div class="project-header">
+            <span class="project-title">NEXTLEARN ↗</span>
+            <span class="project-tag">Video Demo</span>
           </div>
-          <span class="card-transform">Course activity <span class="arrow">→</span> Early intervention</span>
-          <p class="card-desc">An AI-driven e-learning platform forecasting student dropout and exam risk with SHAP
-            explainability, RAG tutor bot, and on-device attention tracking.</p>
-          <ul class="card-chips">
-            <li>TypeScript</li>
-            <li>Python</li>
-            <li>SHAP</li>
-            <li>RAG</li>
-            <li>Express</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study & Demo</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- Project 2: VERBOT -->
-        <div class="project-card" style="--card-tint: var(--c-blue);" onclick="openProject('verbot')">
-          <div class="card-top">
-            <h3 class="card-title">VERBOT</h3>
-            <span class="badge-demo">Video Demo</span>
-          </div>
-          <span class="card-transform">PDFs <span class="arrow">→</span> Grounded answers</span>
-          <p class="card-desc">Bilingual RAG chatbot deployed internally at Vermeg to answer queries over complex
-            financial documents with embedding caching cutting cold-start to ~2s.</p>
-          <ul class="card-chips">
-            <li>Gemini 2.0</li>
-            <li>SentenceTransformers</li>
-            <li>FastAPI</li>
-            <li>Docker</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study & Demo</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- Project 3: ATS Agent -->
-        <div class="project-card" style="--card-tint: var(--c-peach);" onclick="openProject('ats')">
-          <div class="card-top">
-            <h3 class="card-title">ATS Agent</h3>
-            <span class="badge-demo">Video Demo</span>
-          </div>
-          <span class="card-transform">CVs <span class="arrow">→</span> Match scores & gaps</span>
-          <p class="card-desc">Smart résumé scoring system detecting 200+ technical competencies and combining Jaccard,
-            cosine, and weighted metrics into clear skill-gap explanations.</p>
-          <ul class="card-chips">
-            <li>spaCy</li>
-            <li>scikit-learn</li>
-            <li>TF-IDF</li>
-            <li>Streamlit</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study & Demo</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Prime Guide -->
-        <div class="project-card" style="--card-tint: var(--c-pink);" onclick="openProject('prime')">
-          <div class="card-top">
-            <h3 class="card-title">Prime Guide</h3>
-            <span class="badge-demo">Video Demo</span>
-          </div>
-          <span class="card-transform">Briefs <span class="arrow">→</span> 4-format campaigns</span>
-          <p class="card-desc">Multimodal marketing assistant generating coherent social campaigns across text copy,
-            branded imagery, audio narration, and video clips from a single prompt.</p>
-          <ul class="card-chips">
-            <li>Hugging Face</li>
-            <li>Transformers</li>
-            <li>Multimodal</li>
-            <li>Python</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study & Demo</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- Project 5: Tumor Classification -->
-        <div class="project-card" style="--card-tint: var(--c-violet);" onclick="openProject('tumor')">
-          <div class="card-top">
-            <h3 class="card-title">Tumor Classification</h3>
-          </div>
-          <span class="card-transform">MRI scans <span class="arrow">→</span> Clinical diagnosis</span>
-          <p class="card-desc">Deep learning model leveraging transfer learning on medical MRI scans, outperforming
-            baseline models on small datasets through aggressive augmentation.</p>
-          <ul class="card-chips">
-            <li>CNN</li>
-            <li>Transfer Learning</li>
-            <li>TensorFlow</li>
-            <li>Jupyter</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-
-        <!-- Project 6: Emotion Recognition -->
-        <div class="project-card" style="--card-tint: var(--c-lilac);" onclick="openProject('emotion')">
-          <div class="card-top">
-            <h3 class="card-title">Emotion Recognition</h3>
-          </div>
-          <span class="card-transform">Audio waves <span class="arrow">→</span> Tone sentiment</span>
-          <p class="card-desc">Acoustic emotion classification reading emotional cues from voice tone and frequency
-            waveforms rather than plain transcribed text.</p>
-          <ul class="card-chips">
-            <li>Librosa</li>
-            <li>Deep Learning</li>
-            <li>MFCCs</li>
-            <li>Python</li>
-          </ul>
-          <div class="card-footer">
-            <span>View Case Study</span>
-            <span class="card-arrow">→</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <div class="section-header">
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-desc">Practical machine learning, full-stack development, and software engineering roles.</p>
-      </div>
-
-      <div class="experience-list">
-        <div class="experience-card">
-          <div class="exp-header">
-            <h3 class="exp-title">Data Science and AI Intern (End-of-Studies)</h3>
-            <span class="exp-date">Mar 2026 – Sep 2026 </span>
-          </div>
-          <div class="exp-company">Esprit School of Engineering — Tunis</div>
-          <ul class="exp-points">
-            <li>Architecting NEXTLEARN, an AI-driven educational platform for Esprit's C programming curriculum.</li>
-            <li>Trained predictive models forecasting student risk (72–76% accuracy, 0.81–0.84 AUC) with SHAP
-              explainability for instructors.</li>
-            <li>Constructed a curriculum-grounded RAG chatbot preventing out-of-syllabus hallucinations, alongside VARK
-              learning-style recommendations.</li>
-            <li>Engineered client-side webcam attention monitoring running entirely in the browser to ensure absolute
-              student privacy.</li>
+          <p class="project-summary">AI-driven e-learning platform forecasting student dropout and exam failure risk using SHAP explanations, course-grounded RAG, and client-side attention tracking.</p>
+          <ul class="project-tech">
+            <li>TypeScript</li><li>Python</li><li>SHAP</li><li>RAG</li><li>Express</li>
           </ul>
         </div>
 
-        <div class="experience-card">
-          <div class="exp-header">
-            <h3 class="exp-title">Data Science Intern</h3>
-            <span class="exp-date">Jul 2025 – Sep 2025</span>
+        <div class="project-entry" onclick="openProject('verbot')">
+          <div class="project-header">
+            <span class="project-title">VERBOT ↗</span>
+            <span class="project-tag">Video Demo</span>
           </div>
-          <div class="exp-company">Vermeg — Tunis</div>
-          <ul class="exp-points">
-            <li>Engineered an internal RAG assistant (VERBOT) allowing staff to quickly query proprietary financial
-              system manuals.</li>
-            <li>Constructed a vector semantic retrieval pipeline with embedding caching that slashed cold-start latency
-              from 30s to ~2s.</li>
-            <li>Fine-tuned generative models on company documentation to improve domain contextual precision in English
-              and French.</li>
-            <li>Packaged the full pipeline with FastAPI and Docker for internal cloud deployment.</li>
+          <p class="project-summary">Bilingual internal RAG chatbot querying complex enterprise financial software documentation with an embedding cache reducing cold-start latency to ~2s.</p>
+          <ul class="project-tech">
+            <li>Gemini 2.0</li><li>SentenceTransformers</li><li>FastAPI</li><li>Docker</li>
           </ul>
         </div>
 
-        <div class="experience-card">
-          <div class="exp-header">
-            <h3 class="exp-title">Full Stack Developer Intern</h3>
-            <span class="exp-date">Jun 2024 – Aug 2024</span>
+        <div class="project-entry" onclick="openProject('ats')">
+          <div class="project-header">
+            <span class="project-title">ATS Agent ↗</span>
+            <span class="project-tag">Video Demo</span>
           </div>
-          <div class="exp-company">LittleWolf.tech — Tunis</div>
-          <ul class="exp-points">
-            <li>Built an end-to-end real-time collaborative chat application using React, Node.js, and MongoDB.</li>
-            <li>Integrated WebSockets for bidirectional low-latency messaging and user presence detection.</li>
-            <li>Implemented secure authentication, session management, and responsive UI components.</li>
+          <p class="project-summary">CV scoring and gap analysis engine detecting 200+ technical competencies using spaCy NER, lexical overlap, and TF-IDF vector similarity.</p>
+          <ul class="project-tech">
+            <li>spaCy</li><li>scikit-learn</li><li>TF-IDF</li><li>Streamlit</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- Skills & Credentials -->
-    <section id="skills">
-      <div class="section-header">
-        <h2 class="section-title">Technical Expertise</h2>
-        <p class="section-desc">Core competencies across data science, machine learning, and engineering.</p>
-      </div>
+        <div class="project-entry" onclick="openProject('prime')">
+          <div class="project-header">
+            <span class="project-title">Prime Guide ↗</span>
+            <span class="project-tag">Video Demo</span>
+          </div>
+          <p class="project-summary">Multimodal content generator for small businesses producing marketing copy, branded imagery, audio voiceovers, and video from a single prompt.</p>
+          <ul class="project-tech">
+            <li>Hugging Face</li><li>Transformers</li><li>Multimodal</li><li>Python</li>
+          </ul>
+        </div>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3 class="skill-title">ML & Deep Learning</h3>
-          <p class="skill-text">Supervised & Unsupervised Learning, CNNs, RNNs, Transformers, Transfer Learning, SHAP
-          </p>
+        <div class="project-entry" onclick="openProject('tumor')">
+          <div class="project-header">
+            <span class="project-title">Tumor Classification ↗</span>
+            <span class="project-tag">Research</span>
+          </div>
+          <p class="project-summary">Convolutional neural network leveraging transfer learning on MRI brain scans to outperform from-scratch baselines on small medical image sets.</p>
+          <ul class="project-tech">
+            <li>CNN</li><li>Transfer Learning</li><li>TensorFlow</li><li>Jupyter</li>
+          </ul>
         </div>
-        <div class="skill-card">
-          <h3 class="skill-title">Natural Language Processing</h3>
-          <p class="skill-text">RAG Architecture, Vector Embeddings, Semantic Search, spaCy, Hugging Face, LLM
-            fine-tuning</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="skill-title">Languages & Frameworks</h3>
-          <p class="skill-text">Python, TypeScript, SQL, R, FastAPI, Node.js, Express, Streamlit, Docker</p>
-        </div>
-        <div class="skill-card">
-          <h3 class="skill-title">Certifications</h3>
-          <p class="skill-text">AWS Certified Cloud Practitioner · NVIDIA NLP Fundamentals · Hedera Hashgraph Developer
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="contact-box">
-        <h2>Let's connect</h2>
-        <div class="btn-row">
-          <a href="mailto:ajailiayasmine@gmail.com" class="btn btn-primary">✉ ajailiayasmine@gmail.com</a>
-          <a href="https://www.linkedin.com/in/yasmine-laajailia/" target="_blank" rel="noopener" class="btn">LinkedIn
-            Profile</a>
-          <a href="https://github.com/yasmineajailia" target="_blank" rel="noopener" class="btn">GitHub Repos</a>
+        <div class="project-entry" onclick="openProject('emotion')">
+          <div class="project-header">
+            <span class="project-title">Emotion Recognition ↗</span>
+            <span class="project-tag">Research</span>
+          </div>
+          <p class="project-summary">Acoustic emotion classifier analyzing tone, pitch, and vocal cadence directly from raw audio waveforms using spectral features.</p>
+          <ul class="project-tech">
+            <li>Librosa</li><li>Deep Learning</li><li>MFCCs</li><li>Python</li>
+          </ul>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Yasmine Laajailia</p>
-    </div>
-  </footer>
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="section-heading">
+          Experience
+        </h2>
 
-  <!-- Modal for Project Details & Demos -->
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Data Science Intern</span>
+              <span class="timeline-date">Mar 2026 – Sep 2026</span>
+            </div>
+            <div class="timeline-org">Esprit School of Engineering · End-of-studies project</div>
+            <ul class="timeline-notes">
+              <li>Building NEXTLEARN, an AI-driven platform for Esprit's C programming curriculum.</li>
+              <li>Trained risk models forecasting student dropout and exam failure (72–76% accuracy, 0.81–0.84 AUC) with SHAP explanations for instructors.</li>
+              <li>Engineered a curriculum-grounded RAG assistant preventing out-of-syllabus hallucinations.</li>
+              <li>Implemented client-side webcam attention estimation running entirely in the browser for student privacy.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Data Science Intern</span>
+              <span class="timeline-date">Jul 2025 – Sep 2025</span>
+            </div>
+            <div class="timeline-org">Vermeg · Tunis</div>
+            <ul class="timeline-notes">
+              <li>Engineered an internal RAG assistant (VERBOT) allowing staff to query enterprise financial manuals.</li>
+              <li>Built a semantic vector retrieval layer with caching that cut cold-start query latency from 30s to ~2s.</li>
+              <li>Fine-tuned prompts and context retrieval on proprietary English and French documentation.</li>
+              <li>Containerized the solution using FastAPI and Docker for internal platform deployment.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Full Stack Developer Intern</span>
+              <span class="timeline-date">Jun 2024 – Aug 2024</span>
+            </div>
+            <div class="timeline-org">LittleWolf.tech · Tunis</div>
+            <ul class="timeline-notes">
+              <li>Developed a real-time collaborative chat application using React, Node.js, and MongoDB.</li>
+              <li>Implemented WebSockets for bidirectional low-latency messaging and presence tracking.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="section-heading">Technical Background</h2>
+
+        <div class="skills-block">
+          <div class="skills-row">
+            <span class="skills-label">ML & NLP</span>
+            <span class="skills-content">RAG architectures, Vector Embeddings, Transformers, spaCy, Hugging Face, SHAP, CNNs, Librosa</span>
+          </div>
+          <div class="skills-row">
+            <span class="skills-label">Languages</span>
+            <span class="skills-content">Python, TypeScript, SQL, R, C/C++</span>
+          </div>
+          <div class="skills-row">
+            <span class="skills-label">Tools</span>
+            <span class="skills-content">FastAPI, Docker, Express, Node.js, MongoDB, Streamlit, Git</span>
+          </div>
+          <div class="skills-row">
+            <span class="skills-label">Certs</span>
+            <span class="skills-content">AWS Certified Cloud Practitioner · NVIDIA NLP Fundamentals · Hedera Hashgraph Developer</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Yasmine Laajailia · 2026</span>
+      <span><a href="mailto:ajailiayasmine@gmail.com">ajailiayasmine@gmail.com</a></span>
+    </footer>
+  </div>
+
+  <!-- Detail & Demo Modal -->
   <div id="modal" class="modal-backdrop" onclick="handleBackdropClick(event)">
     <div class="modal-window" role="dialog" aria-modal="true">
       <div class="modal-header">
-        <div class="modal-title-wrap">
-          <h3 id="modal-title" class="modal-title">Project Name</h3>
-        </div>
-        <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close modal">✕</button>
+        <h3 id="modal-title" class="modal-title">Project Name</h3>
+        <button class="modal-close" type="button" onclick="closeModal()">Close [Esc]</button>
       </div>
       <div id="modal-body" class="modal-body">
-        <!-- Injected via JavaScript -->
+        <!-- Content injected dynamically -->
       </div>
       <div class="modal-footer">
-        <button class="btn" type="button" onclick="closeModal()">Close</button>
-        <a id="modal-github" href="#" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub ↗</a>
+        <span id="modal-tech-summary" style="color: var(--text-light); font-family: var(--font-mono); font-size: 0.78rem;"></span>
+        <a id="modal-github" href="#" target="_blank" rel="noopener">Source Code (GitHub) ↗</a>
       </div>
     </div>
   </div>
 
   <script>
-    /* ---------- Theme toggle ---------- */
+    /* Theme Toggle */
     const themeBtn = document.getElementById('theme-btn');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-    function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      themeBtn.textContent = theme === 'dark' ? '☼' : '◑';
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      themeBtn.textContent = t === 'dark' ? 'Light' : 'Dark';
     }
 
     const savedTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
@@ -1198,189 +688,111 @@
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
 
-    /* ---------- Project Data ---------- */
+    /* Projects Data */
     const PROJECTS = {
       nextlearn: {
         title: "NEXTLEARN",
-        transform: "Course activity → Early intervention & explainability",
-        lede: "An AI-driven e-learning platform for Esprit's C programming course that tracks student behavior and intervenes before learners fall behind.",
-        chips: ["TypeScript", "Node.js", "Express", "MongoDB", "Python", "SHAP", "RAG"],
+        tech: "TypeScript · Python · SHAP · RAG · Express",
         demo: {
           type: "iframe",
           src: "https://drive.google.com/file/d/1_CxQE6z1Av0kr22TEBJtUm7GhsH7gRgD/preview"
         },
-        problem: "Instructors teaching C programming to large university cohorts had no reliable way to detect struggling students early. Traditional LMS statistics like login frequency provided zero insight into genuine comprehension or dropout likelihood.",
+        problem: "Instructors teaching large university programming cohorts had no reliable mechanism to detect struggling students early before exam failure occurred.",
         approach: [
-          "Captured granular behavioral patterns (time-on-task, quiz trajectories, assignment submission velocity).",
-          "Trained machine learning models to forecast dropout risk and upcoming exam performance.",
-          "Integrated SHAP values into instructor views to clearly explain the 'why' behind each flagged student.",
-          "Deployed a RAG assistant strictly constrained to course documentation to eliminate hallucinations.",
-          "Implemented client-side attention estimation using lightweight browser computer vision — zero student video streams ever touch a backend server."
-        ],
-        features: [
-          { title: "Risk Dashboard", desc: "Real-time dropout and exam performance forecasting with SHAP explanations." },
-          { title: "Curriculum RAG Bot", desc: "Answers student queries strictly using authorized course slides and labs." },
-          { title: "VARK Adaptation", desc: "Recommends content formats according to individual learning preferences." },
-          { title: "Privacy-First Vision", desc: "Browser-side webcam attention tracking with zero cloud transmission." }
-        ],
-        impact: [
-          { fig: "72–76%", cap: "Risk model accuracy" },
-          { fig: "0.81–0.84", cap: "AUC score" },
-          { fig: "On-Device", cap: "Vision inference" },
-          { fig: "4", cap: "AI subsystems shipped" }
+          "Captured granular activity logs including submission cadence, time-on-task, and quiz error patterns.",
+          "Trained risk prediction models (72–76% accuracy, 0.81–0.84 AUC) forecasting student dropout and exam failure.",
+          "Integrated SHAP explanations so instructors see the specific behavioral drivers behind each flagged student.",
+          "Built a RAG tutor bot grounded strictly in authorized course slides and lab documentation.",
+          "Implemented browser-side computer vision attention tracking to guarantee zero student video leaves the client."
         ],
         github: "https://github.com/yasmineajailia/NEXTLEARN"
       },
 
       verbot: {
         title: "VERBOT",
-        transform: "PDF manuals → Grounded instant answers",
-        lede: "A retrieval-augmented chatbot engineered and deployed to Vermeg's internal platform during my data science internship to query financial software documentation.",
-        chips: ["RAG", "Gemini 2.0 Flash", "SentenceTransformers", "FastAPI", "Docker"],
+        tech: "Gemini 2.0 · SentenceTransformers · FastAPI · Docker",
         demo: {
           type: "video",
           src: "demos/VERBOT.mp4"
         },
-        problem: "Vermeg employees frequently spent hours cross-referencing dense PDF manuals for enterprise financial solutions, causing onboarding bottlenecks and delayed client issue resolutions.",
+        problem: "Employees at Vermeg routinely spent substantial time searching through dense financial product manuals, delaying client issue resolution.",
         approach: [
-          "Engineered a full RAG retrieval pipeline chunking technical manuals with semantic sentence transformers.",
-          "Coupled semantic vector retrieval to Gemini 2.0 Flash with strictly grounded generation prompts.",
+          "Developed a semantic chunking and vector retrieval pipeline over proprietary financial manuals.",
+          "Coupled semantic embeddings to Gemini 2.0 Flash with strict source-grounding constraints.",
           "Implemented embedding caching layers that reduced cold-start query latency from ~30s down to ~2s.",
-          "Fine-tuned contextual prompts on proprietary terminology across both English and French company documentation.",
-          "Packaged as a lightweight containerized microservice running FastAPI inside Docker."
-        ],
-        features: [
-          { title: "Semantic Vector Search", desc: "Pinpoints exact manual passages even when user prompts lack precise keywords." },
-          { title: "Bilingual Intelligence", desc: "Fluent in French and English technical financial contexts." },
-          { title: "Embedding Cache", desc: "Reduces response latency from 30s to ~2s on repeated queries." },
-          { title: "Strict Grounding", desc: "Every generated paragraph includes citation references to the source manual." }
-        ],
-        impact: [
-          { fig: "~2s", cap: "Query latency (from 30s)" },
-          { fig: "EN + FR", cap: "Bilingual coverage" },
-          { fig: "Shipped", cap: "Internal platform use" }
+          "Supported both French and English queries across multi-language enterprise manuals.",
+          "Deployed as an internal microservice containerized with FastAPI and Docker."
         ],
         github: "https://github.com/yasmineajailia/vermeg-chatbot"
       },
 
       ats: {
         title: "ATS Agent",
-        transform: "Résumés → Match scores & skill gap analysis",
-        lede: "An automated applicant tracking intelligence agent that extracts competencies, scores job fit across multiple metrics, and details exactly what credentials are missing.",
-        chips: ["spaCy", "scikit-learn", "TF-IDF", "Streamlit", "Python"],
+        tech: "spaCy · scikit-learn · TF-IDF · Streamlit",
         demo: {
           type: "video",
           src: "demos/ATS-AGENT.mp4"
         },
-        problem: "Recruiters manually screening CVs against job posts face fatigue and inconsistency, while generic ATS tools output black-box percentages with zero diagnostic feedback for candidates.",
+        problem: "Recruiters manually screening technical CVs face inconsistent evaluations, while typical commercial ATS platforms offer opaque percentages with no explanatory diagnostics.",
         approach: [
-          "Developed custom NLP entity recognition with spaCy over an ontology of 200+ technical skills.",
-          "Blended Jaccard lexical overlap, cosine TF-IDF similarity, and weighted competency scoring into a single unified verdict.",
-          "Produced an automated gap breakdown highlighting required vs. optional competencies missing from the CV.",
-          "Deployed an interactive Streamlit web dashboard for immediate drag-and-drop analysis."
-        ],
-        features: [
-          { title: "200+ Skills Ontology", desc: "Extracts technical languages, tools, and business frameworks." },
-          { title: "Multi-Metric Rating", desc: "Combines lexical and vector distance for fair assessment." },
-          { title: "Diagnostic Gap Report", desc: "Explicitly details what skills to add or improve to qualify." },
-          { title: "Streamlit UI", desc: "Clean drag-and-drop résumé evaluator with instant feedback." }
-        ],
-        impact: [
-          { fig: "200+", cap: "Skills detected" },
-          { fig: "3", cap: "Blended metrics" },
-          { fig: "Instant", cap: "Gap analysis" }
+          "Created a technical ontology detecting 200+ frameworks, languages, and competencies.",
+          "Blended exact Jaccard overlap, cosine TF-IDF similarity, and weighted skill vectors into an interpretable match score.",
+          "Generated an automated skills gap breakdown highlighting present vs. absent requirements.",
+          "Built a lightweight Streamlit interface for drag-and-drop résumé assessment."
         ],
         github: "https://github.com/yasmineajailia/ATS_AGENT"
       },
 
       prime: {
         title: "Prime Guide",
-        transform: "Single prompt → Multi-format marketing assets",
-        lede: "A multimodal AI content generator tailored for small businesses, producing cohesive social media campaigns across text copy, graphics, voiceovers, and video.",
-        chips: ["Transformers", "Hugging Face", "Multimodal", "Python"],
+        tech: "Hugging Face · Transformers · Multimodal · Python",
         demo: {
           type: "video",
           src: "demos/PRIMEGUIDE.mp4"
         },
-        problem: "Small businesses lack the marketing budget or specialized talent needed to create cohesive promotional campaigns across text, voice, graphics, and video simultaneously.",
+        problem: "Small businesses often lack the resources to generate unified, brand-consistent marketing campaigns across diverse media formats.",
         approach: [
-          "Engineered a multi-model orchestration pipeline combining dedicated open-source generative models.",
-          "Created a single brief interface parsing brand voice, target audience, and product features.",
-          "Decoupled generation modules from training layers to allow continuous fine-tuning on specific brand styles.",
-          "Ensured stylistic continuity across all generated media outputs."
-        ],
-        features: [
-          { title: "Copywriting Engine", desc: "Generates tailored captions, taglines, and campaign copy." },
-          { title: "Visual Generator", desc: "Creates brand-aligned graphic assets from descriptive cues." },
-          { title: "Audio & Voiceover", desc: "Synthesizes expressive voice narration for audio spots." },
-          { title: "Modular Architecture", desc: "Allows individual models to be upgraded or swapped seamlessly." }
-        ],
-        impact: [
-          { fig: "4", cap: "Generated formats" },
-          { fig: "1 Brief", cap: "Full asset suite" },
-          { fig: "Modular", cap: "Pluggable models" }
+          "Constructed a multi-model pipeline uniting generative language, image, and speech models.",
+          "Designed a single brief prompt schema establishing brand tone, audience, and key product benefits.",
+          "Decoupled asset generation from training layers to allow custom brand fine-tuning.",
+          "Automated coordinated production across ad copy, social graphics, and audio voiceover."
         ],
         github: "https://github.com/yasmineajailia/Content-Generation"
       },
 
       tumor: {
         title: "Tumor Classification",
-        transform: "Brain MRI scans → Clinical classification",
-        lede: "A convolutional neural network with transfer learning that accurately classifies brain tumors from MRI scans, overcoming small medical dataset limitations.",
-        chips: ["CNN", "Transfer Learning", "TensorFlow", "Jupyter", "Python"],
-        problem: "Accurately identifying brain tumors on MRI scans requires specialized expertise. Training deep neural networks from scratch on limited clinical imaging sets routinely leads to severe overfitting.",
+        tech: "CNN · Transfer Learning · TensorFlow · Jupyter",
+        problem: "Small medical imaging datasets cause deep neural networks trained from scratch to overfit rapidly.",
         approach: [
-          "Established an initial from-scratch CNN benchmark to evaluate performance bounds.",
-          "Transferred ImageNet feature representations, freezing feature extractors and fine-tuning dense layers on medical images.",
-          "Applied realistic spatial and contrast augmentations (rotations, zoom, flips) to synthesize dataset diversity.",
-          "Analyzed confusion matrices and ROC curves to maintain high sensitivity across all tumor categories."
-        ],
-        features: [
-          { title: "Transfer Learning", desc: "Pre-trained vision features bypass small dataset restrictions." },
-          { title: "Multi-Class Detection", desc: "Categorizes multiple tumor variants with balanced accuracy." },
-          { title: "Clinical Augmentation", desc: "Simulates diverse scanner conditions and patient alignments." },
-          { title: "Baseline Comparison", desc: "Measurably outperforms from-scratch baseline networks." }
-        ],
-        impact: [
-          { fig: "Transfer", cap: "Outperforms baseline" },
-          { fig: "Multi-Class", cap: "Pathology labels" },
-          { fig: "High Recall", cap: "Prioritizes patient safety" }
+          "Benchmarked a from-scratch baseline CNN to identify performance limitations on limited data.",
+          "Applied transfer learning with pre-trained visual backbones, fine-tuning classification heads on MRI scans.",
+          "Used spatial and contrast data augmentations to expand effective training variety.",
+          "Evaluated with ROC and confusion matrices to ensure balanced multi-class recall."
         ],
         github: "https://github.com/yasmineajailia/Cancer-Detection"
       },
 
       emotion: {
         title: "Emotion Recognition",
-        transform: "Raw audio waveforms → Voice sentiment detection",
-        lede: "Acoustic deep learning classifier detecting emotional sentiment directly from human vocal pitch and cadence rather than transcribed text.",
-        chips: ["Audio Processing", "Librosa", "Deep Learning", "Python"],
-        problem: "Text-based sentiment analysis is completely blind to tone, sarcasm, and vocal inflection. Critical voice applications (helplines, customer service) require reading emotional signals directly from acoustics.",
+        tech: "Librosa · Deep Learning · MFCCs · Python",
+        problem: "Text-based sentiment analysis misses sarcasm, urgency, and vocal inflection entirely.",
         approach: [
-          "Extracted MFCCs, chroma vectors, mel-spectrograms, and spectral contrast from audio streams via Librosa.",
-          "Benchmarked classical models (SVM, Random Forests) alongside deep recurrent and convolutional architectures.",
-          "Used pitch-shifting and time-stretching augmentations to handle class imbalance across emotional categories.",
-          "Validated performance on diverse speakers to ensure generalization beyond accent idiosyncrasies."
-        ],
-        features: [
-          { title: "Acoustic-First", desc: "Analyzes pitch, cadence, and timbre rather than text words." },
-          { title: "Rich Spectral Features", desc: "MFCCs, zero-crossing rates, and mel-scaled frequency maps." },
-          { title: "Architecture Benchmark", desc: "Thorough comparison between classical ML and deep nets." },
-          { title: "Audio Augmentations", desc: "Time-stretch and noise injection for robust noise tolerance." }
-        ],
-        impact: [
-          { fig: "Multi-Class", cap: "Emotion categories" },
-          { fig: "Audio-Only", cap: "Zero transcription needed" },
-          { fig: "Benchmarked", cap: "ML vs DL comparison" }
+          "Extracted acoustic features including MFCCs, chroma, and spectral contrast using Librosa.",
+          "Benchmarked classical classifiers against convolutional and recurrent deep learning architectures.",
+          "Employed audio augmentations (pitch shifting, noise addition) to handle class imbalance.",
+          "Evaluated performance directly on speech acoustics without speech-to-text conversion."
         ],
         github: "https://github.com/yasmineajailia/Emotion-Recognition"
       }
     };
 
-    /* ---------- Modal logic ---------- */
+    /* Modal handler */
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modal-title');
     const modalBody = document.getElementById('modal-body');
     const modalGithub = document.getElementById('modal-github');
+    const modalTech = document.getElementById('modal-tech-summary');
 
     function openProject(key) {
       const p = PROJECTS[key];
@@ -1388,13 +800,14 @@
 
       modalTitle.textContent = p.title;
       modalGithub.href = p.github;
+      modalTech.textContent = p.tech;
 
       let demoHTML = '';
       if (p.demo) {
         if (p.demo.type === 'iframe') {
           demoHTML = `
-            <div class="modal-demo">
-              <h4>Interactive Video Demo</h4>
+            <div>
+              <div class="modal-section-title">Video Demonstration</div>
               <div class="modal-player">
                 <iframe src="${p.demo.src}" allow="autoplay"></iframe>
               </div>
@@ -1402,8 +815,8 @@
           `;
         } else if (p.demo.type === 'video') {
           demoHTML = `
-            <div class="modal-demo">
-              <h4>Project Video Demo</h4>
+            <div>
+              <div class="modal-section-title">Video Demonstration</div>
               <div class="modal-player">
                 <video src="${p.demo.src}" controls preload="metadata"></video>
               </div>
@@ -1412,48 +825,17 @@
         }
       }
 
-      const chipsHTML = p.chips.map(c => `<li>${c}</li>`).join('');
-      const approachHTML = p.approach.map(a => `<li>${a}</li>`).join('');
-      const featuresHTML = p.features.map(f => `
-        <div class="feature-card">
-          <div class="fc-title">${f.title}</div>
-          <div class="fc-desc">${f.desc}</div>
-        </div>
-      `).join('');
-      const impactHTML = p.impact.map(i => `
-        <div class="impact-card">
-          <div class="ic-fig">${i.fig}</div>
-          <div class="ic-cap">${i.cap}</div>
-        </div>
-      `).join('');
+      const approachList = p.approach.map(a => `<li>${a}</li>`).join('');
 
       modalBody.innerHTML = `
-        <div class="modal-hero">
-          <span class="modal-transform">${p.transform}</span>
-          <p class="modal-lede">${p.lede}</p>
-          <ul class="modal-chips">${chipsHTML}</ul>
-        </div>
-
         ${demoHTML}
-
-        <div class="modal-section">
-          <h4>Problem</h4>
-          <p>${p.problem}</p>
+        <div>
+          <div class="modal-section-title">Problem</div>
+          <p class="modal-text">${p.problem}</p>
         </div>
-
-        <div class="modal-section">
-          <h4>Approach & Methodology</h4>
-          <ul>${approachHTML}</ul>
-        </div>
-
-        <div class="modal-section">
-          <h4>Key Features</h4>
-          <div class="feature-grid">${featuresHTML}</div>
-        </div>
-
-        <div class="modal-section">
-          <h4>Results & Impact</h4>
-          <div class="impact-grid">${impactHTML}</div>
+        <div>
+          <div class="modal-section-title">Methodology & Implementation</div>
+          <ul class="modal-list">${approachList}</ul>
         </div>
       `;
 
@@ -1462,26 +844,19 @@
     }
 
     function closeModal() {
-      // Pause any active videos inside modal before closing
       const video = modalBody.querySelector('video');
       if (video) video.pause();
-
       modal.classList.remove('open');
       document.body.style.overflow = '';
     }
 
     function handleBackdropClick(e) {
-      if (e.target === modal) {
-        closeModal();
-      }
+      if (e.target === modal) closeModal();
     }
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) {
-        closeModal();
-      }
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
   </script>
 </body>
-
 </html>
