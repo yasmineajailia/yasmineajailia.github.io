@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasmine Laajailia — Data Science & NLP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg: #FAFAF9;
@@ -17,7 +20,7 @@
       --ink-muted: #A8A29E;
       --border: #E7E5E4;
       --border-focus: #D6D3D1;
-      
+
       --accent: #E11D48;
       --accent-soft: rgba(225, 29, 72, 0.08);
       --accent-hover: #BE123C;
@@ -31,9 +34,9 @@
 
       --radius: 16px;
       --radius-sm: 10px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
-      --shadow-md: 0 4px 16px -2px rgba(0,0,0,0.05), 0 2px 6px -1px rgba(0,0,0,0.03);
-      --shadow-lg: 0 20px 35px -8px rgba(0,0,0,0.1), 0 10px 15px -4px rgba(0,0,0,0.04);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 20px 35px -8px rgba(0, 0, 0, 0.1), 0 10px 15px -4px rgba(0, 0, 0, 0.04);
       --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
@@ -47,7 +50,7 @@
       --ink-muted: #78716C;
       --border: #292524;
       --border-focus: #44403C;
-      
+
       --accent: #FB7185;
       --accent-soft: rgba(251, 113, 133, 0.12);
       --accent-hover: #FDA4AF;
@@ -59,12 +62,16 @@
       --c-violet: #A78BFA;
       --c-lilac: #C084FC;
 
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
-      --shadow-md: 0 4px 16px -2px rgba(0,0,0,0.3);
-      --shadow-lg: 0 20px 35px -8px rgba(0,0,0,0.6);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 35px -8px rgba(0, 0, 0, 0.6);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -136,7 +143,9 @@
       transition: color 0.15s ease;
     }
 
-    .nav-link:hover { color: var(--ink); }
+    .nav-link:hover {
+      color: var(--ink);
+    }
 
     .theme-btn {
       background: none;
@@ -570,8 +579,13 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     .modal-window {
@@ -590,8 +604,15 @@
     }
 
     @keyframes popIn {
-      from { transform: scale(0.95) translateY(12px); opacity: 0; }
-      to { transform: scale(1) translateY(0); opacity: 1; }
+      from {
+        transform: scale(0.95) translateY(12px);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
     }
 
     .modal-header {
@@ -741,7 +762,8 @@
       font-weight: 700;
     }
 
-    .modal-section p, .modal-section ul {
+    .modal-section p,
+    .modal-section ul {
       font-size: 0.92rem;
       color: var(--ink-soft);
       line-height: 1.65;
@@ -818,14 +840,30 @@
     }
 
     @media (max-width: 640px) {
-      .hero { padding: 3.5rem 0 2rem; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .stats-bar { grid-template-columns: 1fr; }
-      .modal-window { border-radius: 16px; max-height: 94vh; }
-      .modal-body { padding: 1.25rem; }
+      .hero {
+        padding: 3.5rem 0 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-window {
+        border-radius: 16px;
+        max-height: 94vh;
+      }
+
+      .modal-body {
+        padding: 1.25rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -848,14 +886,12 @@
   <main class="container">
     <!-- Hero / Introduction -->
     <section class="hero">
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        Graduating Sept 2026 · Open to opportunities
-      </div>
       <h1 class="hero-title">Engineering intelligent systems that read, listen & see.</h1>
-      <p class="hero-tagline">Data science student specializing in <span class="highlight">NLP</span> & <span class="highlight">Applied Machine Learning</span>.</p>
+      <p class="hero-tagline">Computer Science engineer specializing in <span class="highlight">NLP</span> & <span
+          class="highlight">Data Science</span>.</p>
       <p class="hero-bio">
-        I bridge the gap between unstructured data and real-world utility — turning messy PDFs into grounded RAG answers, student learning patterns into dropout forecasts, and audio waveforms into real-time emotion insights. Currently engineering an AI-powered e-learning platform at Esprit School of Engineering.
+        I bridge the gap between unstructured data and real-world utility, turning messy PDFs into grounded RAG answers,
+        student learning patterns into dropout forecasts, and audio waveforms into real-time emotion insights.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">Explore Projects ↓</a>
@@ -885,7 +921,8 @@
     <section id="projects">
       <div class="section-header">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-desc">Hand-picked case studies with live interactive demos and source code. Click any project to view details & video demos.</p>
+        <p class="section-desc">Hand-picked case studies with live interactive demos and source code. Click any project
+          to view details & video demos.</p>
       </div>
 
       <div class="projects-grid">
@@ -896,9 +933,14 @@
             <span class="badge-demo">Video Demo</span>
           </div>
           <span class="card-transform">Course activity <span class="arrow">→</span> Early intervention</span>
-          <p class="card-desc">An AI-driven e-learning platform forecasting student dropout and exam risk with SHAP explainability, RAG tutor bot, and on-device attention tracking.</p>
+          <p class="card-desc">An AI-driven e-learning platform forecasting student dropout and exam risk with SHAP
+            explainability, RAG tutor bot, and on-device attention tracking.</p>
           <ul class="card-chips">
-            <li>TypeScript</li><li>Python</li><li>SHAP</li><li>RAG</li><li>Express</li>
+            <li>TypeScript</li>
+            <li>Python</li>
+            <li>SHAP</li>
+            <li>RAG</li>
+            <li>Express</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study & Demo</span>
@@ -913,9 +955,13 @@
             <span class="badge-demo">Video Demo</span>
           </div>
           <span class="card-transform">PDFs <span class="arrow">→</span> Grounded answers</span>
-          <p class="card-desc">Bilingual RAG chatbot deployed internally at Vermeg to answer queries over complex financial documents with embedding caching cutting cold-start to ~2s.</p>
+          <p class="card-desc">Bilingual RAG chatbot deployed internally at Vermeg to answer queries over complex
+            financial documents with embedding caching cutting cold-start to ~2s.</p>
           <ul class="card-chips">
-            <li>Gemini 2.0</li><li>SentenceTransformers</li><li>FastAPI</li><li>Docker</li>
+            <li>Gemini 2.0</li>
+            <li>SentenceTransformers</li>
+            <li>FastAPI</li>
+            <li>Docker</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study & Demo</span>
@@ -930,9 +976,13 @@
             <span class="badge-demo">Video Demo</span>
           </div>
           <span class="card-transform">CVs <span class="arrow">→</span> Match scores & gaps</span>
-          <p class="card-desc">Smart résumé scoring system detecting 200+ technical competencies and combining Jaccard, cosine, and weighted metrics into clear skill-gap explanations.</p>
+          <p class="card-desc">Smart résumé scoring system detecting 200+ technical competencies and combining Jaccard,
+            cosine, and weighted metrics into clear skill-gap explanations.</p>
           <ul class="card-chips">
-            <li>spaCy</li><li>scikit-learn</li><li>TF-IDF</li><li>Streamlit</li>
+            <li>spaCy</li>
+            <li>scikit-learn</li>
+            <li>TF-IDF</li>
+            <li>Streamlit</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study & Demo</span>
@@ -947,9 +997,13 @@
             <span class="badge-demo">Video Demo</span>
           </div>
           <span class="card-transform">Briefs <span class="arrow">→</span> 4-format campaigns</span>
-          <p class="card-desc">Multimodal marketing assistant generating coherent social campaigns across text copy, branded imagery, audio narration, and video clips from a single prompt.</p>
+          <p class="card-desc">Multimodal marketing assistant generating coherent social campaigns across text copy,
+            branded imagery, audio narration, and video clips from a single prompt.</p>
           <ul class="card-chips">
-            <li>Hugging Face</li><li>Transformers</li><li>Multimodal</li><li>Python</li>
+            <li>Hugging Face</li>
+            <li>Transformers</li>
+            <li>Multimodal</li>
+            <li>Python</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study & Demo</span>
@@ -963,9 +1017,13 @@
             <h3 class="card-title">Tumor Classification</h3>
           </div>
           <span class="card-transform">MRI scans <span class="arrow">→</span> Clinical diagnosis</span>
-          <p class="card-desc">Deep learning model leveraging transfer learning on medical MRI scans, outperforming baseline models on small datasets through aggressive augmentation.</p>
+          <p class="card-desc">Deep learning model leveraging transfer learning on medical MRI scans, outperforming
+            baseline models on small datasets through aggressive augmentation.</p>
           <ul class="card-chips">
-            <li>CNN</li><li>Transfer Learning</li><li>TensorFlow</li><li>Jupyter</li>
+            <li>CNN</li>
+            <li>Transfer Learning</li>
+            <li>TensorFlow</li>
+            <li>Jupyter</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study</span>
@@ -979,9 +1037,13 @@
             <h3 class="card-title">Emotion Recognition</h3>
           </div>
           <span class="card-transform">Audio waves <span class="arrow">→</span> Tone sentiment</span>
-          <p class="card-desc">Acoustic emotion classification reading emotional cues from voice tone and frequency waveforms rather than plain transcribed text.</p>
+          <p class="card-desc">Acoustic emotion classification reading emotional cues from voice tone and frequency
+            waveforms rather than plain transcribed text.</p>
           <ul class="card-chips">
-            <li>Librosa</li><li>Deep Learning</li><li>MFCCs</li><li>Python</li>
+            <li>Librosa</li>
+            <li>Deep Learning</li>
+            <li>MFCCs</li>
+            <li>Python</li>
           </ul>
           <div class="card-footer">
             <span>View Case Study</span>
@@ -1001,15 +1063,18 @@
       <div class="experience-list">
         <div class="experience-card">
           <div class="exp-header">
-            <h3 class="exp-title">Data Science Intern (End-of-Studies)</h3>
-            <span class="exp-date">Mar 2026 – Sep 2026 · Current</span>
+            <h3 class="exp-title">Data Science and AI Intern (End-of-Studies)</h3>
+            <span class="exp-date">Mar 2026 – Sep 2026 </span>
           </div>
           <div class="exp-company">Esprit School of Engineering — Tunis</div>
           <ul class="exp-points">
             <li>Architecting NEXTLEARN, an AI-driven educational platform for Esprit's C programming curriculum.</li>
-            <li>Trained predictive models forecasting student risk (72–76% accuracy, 0.81–0.84 AUC) with SHAP explainability for instructors.</li>
-            <li>Constructed a curriculum-grounded RAG chatbot preventing out-of-syllabus hallucinations, alongside VARK learning-style recommendations.</li>
-            <li>Engineered client-side webcam attention monitoring running entirely in the browser to ensure absolute student privacy.</li>
+            <li>Trained predictive models forecasting student risk (72–76% accuracy, 0.81–0.84 AUC) with SHAP
+              explainability for instructors.</li>
+            <li>Constructed a curriculum-grounded RAG chatbot preventing out-of-syllabus hallucinations, alongside VARK
+              learning-style recommendations.</li>
+            <li>Engineered client-side webcam attention monitoring running entirely in the browser to ensure absolute
+              student privacy.</li>
           </ul>
         </div>
 
@@ -1020,9 +1085,12 @@
           </div>
           <div class="exp-company">Vermeg — Tunis</div>
           <ul class="exp-points">
-            <li>Engineered an internal RAG assistant (VERBOT) allowing staff to quickly query proprietary financial system manuals.</li>
-            <li>Constructed a vector semantic retrieval pipeline with embedding caching that slashed cold-start latency from 30s to ~2s.</li>
-            <li>Fine-tuned generative models on company documentation to improve domain contextual precision in English and French.</li>
+            <li>Engineered an internal RAG assistant (VERBOT) allowing staff to quickly query proprietary financial
+              system manuals.</li>
+            <li>Constructed a vector semantic retrieval pipeline with embedding caching that slashed cold-start latency
+              from 30s to ~2s.</li>
+            <li>Fine-tuned generative models on company documentation to improve domain contextual precision in English
+              and French.</li>
             <li>Packaged the full pipeline with FastAPI and Docker for internal cloud deployment.</li>
           </ul>
         </div>
@@ -1052,11 +1120,13 @@
       <div class="skills-grid">
         <div class="skill-card">
           <h3 class="skill-title">ML & Deep Learning</h3>
-          <p class="skill-text">Supervised & Unsupervised Learning, CNNs, RNNs, Transformers, Transfer Learning, SHAP</p>
+          <p class="skill-text">Supervised & Unsupervised Learning, CNNs, RNNs, Transformers, Transfer Learning, SHAP
+          </p>
         </div>
         <div class="skill-card">
           <h3 class="skill-title">Natural Language Processing</h3>
-          <p class="skill-text">RAG Architecture, Vector Embeddings, Semantic Search, spaCy, Hugging Face, LLM fine-tuning</p>
+          <p class="skill-text">RAG Architecture, Vector Embeddings, Semantic Search, spaCy, Hugging Face, LLM
+            fine-tuning</p>
         </div>
         <div class="skill-card">
           <h3 class="skill-title">Languages & Frameworks</h3>
@@ -1064,7 +1134,8 @@
         </div>
         <div class="skill-card">
           <h3 class="skill-title">Certifications</h3>
-          <p class="skill-text">AWS Certified Cloud Practitioner · NVIDIA NLP Fundamentals · Hedera Hashgraph Developer</p>
+          <p class="skill-text">AWS Certified Cloud Practitioner · NVIDIA NLP Fundamentals · Hedera Hashgraph Developer
+          </p>
         </div>
       </div>
     </section>
@@ -1073,10 +1144,10 @@
     <section id="contact">
       <div class="contact-box">
         <h2>Let's connect</h2>
-        <p>Graduating in September 2026 and currently seeking data science, machine learning, and NLP opportunities. I would love to hear about your team and projects!</p>
         <div class="btn-row">
           <a href="mailto:ajailiayasmine@gmail.com" class="btn btn-primary">✉ ajailiayasmine@gmail.com</a>
-          <a href="https://www.linkedin.com/in/yasmine-laajailia/" target="_blank" rel="noopener" class="btn">LinkedIn Profile</a>
+          <a href="https://www.linkedin.com/in/yasmine-laajailia/" target="_blank" rel="noopener" class="btn">LinkedIn
+            Profile</a>
           <a href="https://github.com/yasmineajailia" target="_blank" rel="noopener" class="btn">GitHub Repos</a>
         </div>
       </div>
@@ -1085,7 +1156,7 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Yasmine Laajailia · Built with clean semantic HTML & modern CSS.</p>
+      <p>© 2026 Yasmine Laajailia</p>
     </div>
   </footer>
 
@@ -1412,4 +1483,5 @@
     });
   </script>
 </body>
+
 </html>
