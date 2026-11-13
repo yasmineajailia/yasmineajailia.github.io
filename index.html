@@ -517,6 +517,193 @@
 
   .metrics .cap { font-size: var(--s-1); color: var(--muted); }
 
+  /* ---------- rich project detail pages ---------- */
+
+  .project-detail { display: flex; flex-direction: column; gap: 1.6rem; max-width: 780px; margin: 0 auto; }
+
+  .project-hero { display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .project-detail h2 { font-size: var(--s4); margin: 0; }
+
+  .project-section { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .project-section h3 {
+    font-size: var(--s0);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--tint);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+  }
+
+  .project-section h3::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--tint);
+    flex: none;
+  }
+
+  .project-section p, .project-section ul { font-size: var(--s0); color: var(--ink-soft); margin: 0; }
+
+  .project-section ul {
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .project-section li::marker { color: var(--tint); }
+
+  .screenshot-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--r-sm);
+    border: 2px dashed var(--rule);
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-size: var(--s-1);
+    font-weight: 600;
+    background: color-mix(in oklab, var(--tint) 5%, transparent);
+  }
+
+  /* ---------- demo video section ---------- */
+
+  .demo-section { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .demo-section h3 {
+    font-size: var(--s0);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--tint);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+  }
+
+  .demo-section h3::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--tint);
+    flex: none;
+  }
+
+  .demo-player {
+    position: relative;
+    width: 100%;
+    border-radius: var(--r-sm);
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: #000;
+  }
+
+  .demo-player video {
+    width: 100%;
+    display: block;
+    border-radius: var(--r-sm);
+  }
+
+  .demo-placeholder {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: color-mix(in oklab, var(--tint) 6%, transparent);
+    border: 2px dashed var(--rule);
+    border-radius: var(--r-sm);
+  }
+
+  .demo-placeholder .demo-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: color-mix(in oklab, var(--tint) 16%, transparent);
+    display: grid;
+    place-items: center;
+    color: var(--tint);
+  }
+
+  .demo-placeholder .demo-icon svg { width: 26px; height: 26px; }
+
+  .demo-placeholder .demo-label {
+    font-size: var(--s0);
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .demo-placeholder .demo-hint {
+    font-size: var(--s-1);
+    color: var(--muted);
+    opacity: 0.7;
+    text-align: center;
+    max-width: 28ch;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.7rem;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-sm);
+    padding: 0.8rem 0.9rem;
+  }
+
+  :root[data-theme="dark"] .feature-card { background: rgba(255, 255, 255, 0.05); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .feature-card { background: rgba(255, 255, 255, 0.05); }
+  }
+
+  .feature-card .fc-title {
+    font-weight: 700;
+    font-size: var(--s0);
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .feature-card .fc-desc { font-size: var(--s-1); color: var(--ink-soft); }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 0.7rem;
+  }
+
+  .impact-card {
+    text-align: center;
+    padding: 0.9rem 0.6rem;
+    border-radius: var(--r-sm);
+    background: color-mix(in oklab, var(--tint) 8%, transparent);
+    border: 1px solid color-mix(in oklab, var(--tint) 18%, transparent);
+  }
+
+  .impact-card .ic-fig {
+    font-size: var(--s3);
+    font-weight: 700;
+    color: var(--tint);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  .impact-card .ic-cap { font-size: var(--s-1); color: var(--muted); }
+
+  /* full-screen project windows */
+  .win.project-win {
+    transition: left 0.32s cubic-bezier(0.2, 0.8, 0.3, 1),
+                top 0.32s cubic-bezier(0.2, 0.8, 0.3, 1),
+                width 0.32s cubic-bezier(0.2, 0.8, 0.3, 1),
+                height 0.32s cubic-bezier(0.2, 0.8, 0.3, 1);
+  }
+
   /* experience */
 
   .role { display: flex; flex-direction: column; gap: 0.3rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule); }
@@ -783,6 +970,9 @@
   <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
     <path d="M6 3.5h8l4.5 4.5v12a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5v-15A1.5 1.5 0 0 1 6 3.5z"/><path d="M14 3.5V8h4.5"/>
   </symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="6,3 20,12 6,21" fill="currentColor" stroke="none"/>
+  </symbol>
 </svg>
 
 <div class="menubar">
@@ -870,150 +1060,382 @@
           <span class="fmeta"><span class="fname">Emotion Recognition</span><span class="fdesc"> Audio → sentiment</span></span>
         </button>
       </div>
-      <p class="note">
-        Also on GitHub:
-        <a href="https://github.com/yasmineajailia/EcoPlant">EcoPlant</a>,
-        <a href="https://github.com/yasmineajailia/Job_Prediction">Job_Prediction</a>,
-        <a href="https://github.com/yasmineajailia/skin-type-classification">skin-type-classification</a>,
-        <a href="https://github.com/yasmineajailia/Data-Cleaning-using-sql">Data-Cleaning-using-sql</a>,
-        <a href="https://github.com/yasmineajailia/WebApp-using-Symfony">WebApp-using-Symfony</a>,
-        <a href="https://github.com/yasmineajailia/game-dev-1A7">game-dev-1A7</a>.
-      </p>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-nextlearn" data-title="NEXTLEARN" data-w="500" data-h="480" data-x="380" data-y="110" style="--tint: var(--c-mint);" role="dialog" aria-label="NEXTLEARN">
+<section class="win project-win" id="win-nextlearn" data-title="NEXTLEARN" data-w="500" data-h="480" data-x="380" data-y="110" style="--tint: var(--c-mint);" role="dialog" aria-label="NEXTLEARN">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">NEXTLEARN</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>NEXTLEARN</h2>
-      <p class="transform"><span>Course activity</span><span class="arrow">→</span><span class="out">who needs help, and why</span></p>
-      <p class="lede">
-        An e-learning platform for Esprit's C programming course that watches
-        how students actually work and intervenes before they fall behind. A
-        model forecasts dropout risk and exam performance; SHAP explains every
-        prediction, so a tutor sees the reasoning rather than a bare score.
-        Alongside it: a RAG chatbot answering only from course material,
-        VARK-based learning-style recommendations, and webcam attention
-        tracking that runs entirely in the browser — no images ever leave the
-        student's device.
-      </p>
-      <ul class="chips">
-        <li>TypeScript</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Python</li><li>SHAP</li><li>RAG</li>
-      </ul>
-      <ul class="metrics">
-        <li><span class="fig">72–76%</span><span class="cap">Risk-model accuracy</span></li>
-        <li><span class="fig">0.81–0.84</span><span class="cap">AUC</span></li>
-        <li><span class="fig">On-device</span><span class="cap">Attention tracking</span></li>
-      </ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>NEXTLEARN</h2>
+        <p class="transform"><span>Course activity</span><span class="arrow">→</span><span class="out">who needs help, and why</span></p>
+        <p class="lede">An AI-driven e-learning platform for Esprit's C programming course that watches how students work and intervenes before they fall behind.</p>
+        <ul class="chips">
+          <li>TypeScript</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Python</li><li>SHAP</li><li>RAG</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <h3>Demo</h3>
+        <!-- Replace the demo-placeholder below with: <div class="demo-player"><video src="demos/nextlearn-demo.mp4" controls preload="metadata" poster="demos/nextlearn-poster.jpg"></video></div> -->
+        <div class="demo-placeholder">
+          <div class="demo-icon"><svg><use href="#i-play"/></svg></div>
+          <span class="demo-label">Demo video coming soon</span>
+          <span class="demo-hint">Drop nextlearn-demo.mp4 into the demos/ folder</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Instructors teaching C programming to large cohorts at Esprit had no reliable way to detect struggling students early. By the time low grades appeared, it was too late to intervene. Standard LMS metrics like login frequency told very little about genuine engagement or risk of dropout.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Collected fine-grained behavioural signals — time-on-task, submission patterns, quiz trajectories, and forum activity — and trained gradient-boosted and logistic models to forecast dropout risk and exam performance.</li>
+          <li>Applied SHAP to every prediction so tutors can see <em>why</em> a student was flagged, not just a bare score.</li>
+          <li>Built a RAG chatbot grounded strictly in course material, preventing hallucinated answers outside the syllabus.</li>
+          <li>Implemented a VARK-based learning-style classifier that recommends content format (visual, auditory, read/write, kinaesthetic) per student.</li>
+          <li>Added webcam-based attention monitoring using lightweight pose estimation — all inference runs browser-side so no images ever leave the student's device.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">Risk Dashboard</div><div class="fc-desc">Real-time dropout and performance forecasts with SHAP explanations for each student.</div></div>
+          <div class="feature-card"><div class="fc-title">RAG Chatbot</div><div class="fc-desc">Answers only from course material — no hallucinations from outside the syllabus.</div></div>
+          <div class="feature-card"><div class="fc-title">Learning Style Recs</div><div class="fc-desc">VARK-based classifier matches each student to the right content format.</div></div>
+          <div class="feature-card"><div class="fc-title">Attention Tracking</div><div class="fc-desc">Browser-side webcam monitoring — privacy-first, no images leave the device.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">72–76%</div><div class="ic-cap">Risk-model accuracy</div></div>
+          <div class="impact-card"><div class="ic-fig">0.81–0.84</div><div class="ic-cap">AUC score</div></div>
+          <div class="impact-card"><div class="ic-fig">On-device</div><div class="ic-cap">Attention tracking</div></div>
+          <div class="impact-card"><div class="ic-fig">4</div><div class="ic-cap">AI modules shipped</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/NEXTLEARN">View on GitHub</a></div>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-verbot" data-title="VERBOT" data-w="480" data-h="410" data-x="400" data-y="140" style="--tint: var(--c-blue);" role="dialog" aria-label="VERBOT">
+<section class="win project-win" id="win-verbot" data-title="VERBOT" data-w="480" data-h="410" data-x="400" data-y="140" style="--tint: var(--c-blue);" role="dialog" aria-label="VERBOT">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">VERBOT</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>VERBOT</h2>
-      <p class="transform"><span>PDFs</span><span class="arrow">→</span><span class="out">grounded answers</span></p>
-      <p class="lede">
-        A retrieval-augmented chatbot answering questions about Vermeg's
-        financial products, built and deployed to the company's internal
-        platform during my internship there. An embedding cache cuts cold start
-        from 30 seconds to about two, and it answers in both English and French.
-      </p>
-      <ul class="chips">
-        <li>RAG</li><li>Gemini 2.0 Flash</li><li>SentenceTransformers</li><li>FastAPI</li><li>Docker</li>
-      </ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>VERBOT</h2>
+        <p class="transform"><span>PDFs</span><span class="arrow">→</span><span class="out">grounded answers</span></p>
+        <p class="lede">A retrieval-augmented chatbot answering questions about Vermeg's financial products, built and deployed to the company's internal platform during my internship.</p>
+        <ul class="chips">
+          <li>RAG</li><li>Gemini 2.0 Flash</li><li>SentenceTransformers</li><li>FastAPI</li><li>Docker</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <h3>Demo</h3>
+        <!-- Replace the demo-placeholder below with: <div class="demo-player"><video src="demos/verbot-demo.mp4" controls preload="metadata" poster="demos/verbot-poster.jpg"></video></div> -->
+        <div class="demo-placeholder">
+          <div class="demo-icon"><svg><use href="#i-play"/></svg></div>
+          <span class="demo-label">Demo video coming soon</span>
+          <span class="demo-hint">Drop verbot-demo.mp4 into the demos/ folder</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Vermeg employees spent significant time searching through dense PDF documentation to find answers about the company's financial products. Information was scattered across multiple documents with no centralised, intelligent search — slowing down onboarding and daily work.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Designed a RAG pipeline: PDFs are chunked, embedded with SentenceTransformers, and indexed in a vector store for fast semantic retrieval.</li>
+          <li>Connected the retrieval layer to Gemini 2.0 Flash for answer generation grounded strictly in retrieved passages.</li>
+          <li>Built an embedding cache that cuts cold start from ~30 seconds to ~2 seconds on subsequent queries.</li>
+          <li>Fine-tuned the LLM on proprietary Vermeg data to sharpen domain-specific understanding.</li>
+          <li>Containerised the full stack with Docker and deployed to the company's internal platform.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">Semantic Search</div><div class="fc-desc">Vector-based retrieval finds the right passages even when the question uses different wording.</div></div>
+          <div class="feature-card"><div class="fc-title">Bilingual</div><div class="fc-desc">Answers in both English and French, matching the company's working languages.</div></div>
+          <div class="feature-card"><div class="fc-title">Embedding Cache</div><div class="fc-desc">Reduces cold start from 30s to ~2s by caching pre-computed embeddings.</div></div>
+          <div class="feature-card"><div class="fc-title">Grounded Answers</div><div class="fc-desc">Every response traces back to a source document — no hallucinations.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">~2s</div><div class="ic-cap">Cold start (from 30s)</div></div>
+          <div class="impact-card"><div class="ic-fig">EN + FR</div><div class="ic-cap">Bilingual support</div></div>
+          <div class="impact-card"><div class="ic-fig">Shipped</div><div class="ic-cap">Internal deployment</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/vermeg-chatbot">View on GitHub</a></div>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-ats" data-title="ATS Agent" data-w="470" data-h="390" data-x="420" data-y="170" style="--tint: var(--c-peach);" role="dialog" aria-label="ATS Agent">
+<section class="win project-win" id="win-ats" data-title="ATS Agent" data-w="470" data-h="390" data-x="420" data-y="170" style="--tint: var(--c-peach);" role="dialog" aria-label="ATS Agent">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">ATS Agent</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>ATS Agent</h2>
-      <p class="transform"><span>Résumés</span><span class="arrow">→</span><span class="out">match scores</span></p>
-      <p class="lede">
-        Scores how well a résumé matches a job description, detecting 200+
-        technical and professional competencies. Combines Jaccard, cosine and
-        weighted similarity into a single readable verdict, then explains which
-        skills are missing and why.
-      </p>
-      <ul class="chips"><li>spaCy</li><li>scikit-learn</li><li>TF-IDF</li><li>Streamlit</li></ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>ATS Agent</h2>
+        <p class="transform"><span>Résumés</span><span class="arrow">→</span><span class="out">match scores</span></p>
+        <p class="lede">An intelligent applicant tracking tool that scores how well a résumé matches a job description, then explains exactly what's missing and why.</p>
+        <ul class="chips">
+          <li>spaCy</li><li>scikit-learn</li><li>TF-IDF</li><li>Streamlit</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <h3>Demo</h3>
+        <!-- Replace the demo-placeholder below with: <div class="demo-player"><video src="demos/ats-demo.mp4" controls preload="metadata" poster="demos/ats-poster.jpg"></video></div> -->
+        <div class="demo-placeholder">
+          <div class="demo-icon"><svg><use href="#i-play"/></svg></div>
+          <span class="demo-label">Demo video coming soon</span>
+          <span class="demo-hint">Drop ats-demo.mp4 into the demos/ folder</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Recruiters manually scanning résumés against job descriptions is slow, inconsistent, and biased. Most off-the-shelf ATS tools give a match score with no explanation, leaving candidates guessing what to fix and recruiters unsure whether the score is meaningful.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Built a skill extraction pipeline using spaCy's NER and a curated taxonomy of 200+ technical and professional competencies.</li>
+          <li>Combined three similarity metrics — Jaccard (exact overlap), cosine (TF-IDF vectors), and weighted similarity (skill importance) — into a single interpretable match score.</li>
+          <li>Generated per-skill gap analysis showing which required competencies are present, partially present, or missing from the résumé.</li>
+          <li>Wrapped the pipeline in a Streamlit app for an interactive, no-code interface.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">200+ Skills</div><div class="fc-desc">Detects technical and professional competencies from résumé text.</div></div>
+          <div class="feature-card"><div class="fc-title">Multi-Metric Score</div><div class="fc-desc">Jaccard + cosine + weighted similarity merged into one readable verdict.</div></div>
+          <div class="feature-card"><div class="fc-title">Gap Analysis</div><div class="fc-desc">Explains which skills are missing and why the score is what it is.</div></div>
+          <div class="feature-card"><div class="fc-title">Streamlit UI</div><div class="fc-desc">Upload a CV and job posting, get instant visual feedback.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">200+</div><div class="ic-cap">Skills detected</div></div>
+          <div class="impact-card"><div class="ic-fig">3</div><div class="ic-cap">Similarity metrics</div></div>
+          <div class="impact-card"><div class="ic-fig">Instant</div><div class="ic-cap">Gap report</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/ATS_AGENT">View on GitHub</a></div>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-prime" data-title="Prime Guide" data-w="470" data-h="380" data-x="440" data-y="200" style="--tint: var(--c-pink);" role="dialog" aria-label="Prime Guide">
+<section class="win project-win" id="win-prime" data-title="Prime Guide" data-w="470" data-h="380" data-x="440" data-y="200" style="--tint: var(--c-pink);" role="dialog" aria-label="Prime Guide">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">Prime Guide</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>Prime Guide</h2>
-      <p class="transform"><span>Briefs</span><span class="arrow">→</span><span class="out">campaign assets</span></p>
-      <p class="lede">
-        A multimodal marketing assistant for small businesses, generating social
-        content across text, image, voice and video from a short prompt. Built
-        on Hugging Face models with separate generator and trainer modules.
-      </p>
-      <ul class="chips"><li>Transformers</li><li>Hugging Face</li><li>Multimodal</li><li>Python</li></ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>Prime Guide</h2>
+        <p class="transform"><span>Briefs</span><span class="arrow">→</span><span class="out">campaign assets</span></p>
+        <p class="lede">A multimodal marketing assistant for small businesses, generating social content across text, image, voice and video from a short prompt.</p>
+        <ul class="chips">
+          <li>Transformers</li><li>Hugging Face</li><li>Multimodal</li><li>Python</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <h3>Demo</h3>
+        <!-- Replace the demo-placeholder below with: <div class="demo-player"><video src="demos/prime-demo.mp4" controls preload="metadata" poster="demos/prime-poster.jpg"></video></div> -->
+        <div class="demo-placeholder">
+          <div class="demo-icon"><svg><use href="#i-play"/></svg></div>
+          <span class="demo-label">Demo video coming soon</span>
+          <span class="demo-hint">Drop prime-demo.mp4 into the demos/ folder</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Small businesses need marketing content but can't afford agencies or professional tools. Creating cohesive campaigns across text, images, audio, and video from scratch is time-consuming and requires multiple specialised skills most small teams don't have.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Designed a modular pipeline where each modality (text, image, voice, video) is handled by a dedicated Hugging Face model.</li>
+          <li>Built a unified prompt interface — the user writes a short brief describing their product and target audience, and the system generates assets across all four formats.</li>
+          <li>Separated the architecture into generator and trainer modules so each model can be fine-tuned independently on domain-specific data.</li>
+          <li>Focused on brand consistency: all outputs share a tone and visual identity derived from the original brief.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">Text Generation</div><div class="fc-desc">Captions, taglines, and ad copy tailored to the product and audience.</div></div>
+          <div class="feature-card"><div class="fc-title">Image Generation</div><div class="fc-desc">Branded visuals for social media posts from a text prompt.</div></div>
+          <div class="feature-card"><div class="fc-title">Voice Generation</div><div class="fc-desc">Audio narration for ads and video voiceovers.</div></div>
+          <div class="feature-card"><div class="fc-title">Modular Pipeline</div><div class="fc-desc">Each modality can be fine-tuned or swapped independently.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">4</div><div class="ic-cap">Modalities</div></div>
+          <div class="impact-card"><div class="ic-fig">1 prompt</div><div class="ic-cap">Full campaign</div></div>
+          <div class="impact-card"><div class="ic-fig">Modular</div><div class="ic-cap">Architecture</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Content-Generation">View on GitHub</a></div>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-tumor" data-title="Tumor Classification" data-w="470" data-h="370" data-x="460" data-y="130" style="--tint: var(--c-violet);" role="dialog" aria-label="Tumor Classification">
+<section class="win project-win" id="win-tumor" data-title="Tumor Classification" data-w="470" data-h="370" data-x="460" data-y="130" style="--tint: var(--c-violet);" role="dialog" aria-label="Tumor Classification">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">Tumor Classification</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>Tumor Classification</h2>
-      <p class="transform"><span>MRI scans</span><span class="arrow">→</span><span class="out">diagnoses</span></p>
-      <p class="lede">
-        A CNN with transfer learning that classifies brain tumors from MRI
-        scans, beating the from-scratch baseline by reusing pretrained visual
-        features on a small medical dataset.
-      </p>
-      <ul class="chips"><li>CNN</li><li>Transfer learning</li><li>Jupyter</li></ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>Tumor Classification</h2>
+        <p class="transform"><span>MRI scans</span><span class="arrow">→</span><span class="out">diagnoses</span></p>
+        <p class="lede">A CNN with transfer learning that classifies brain tumors from MRI scans, beating the from-scratch baseline by reusing pretrained visual features on a small medical dataset.</p>
+        <ul class="chips">
+          <li>CNN</li><li>Transfer learning</li><li>TensorFlow</li><li>Jupyter</li>
+        </ul>
+      </div>
+
+      <div class="screenshot-placeholder">📸 Screenshot coming soon</div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Diagnosing brain tumors from MRI scans requires specialist radiologists and is time-intensive. Small medical datasets make it hard to train deep learning models from scratch — they overfit quickly and generalise poorly to new patients.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Established a from-scratch CNN baseline to quantify the performance ceiling on the small dataset.</li>
+          <li>Applied transfer learning from pretrained ImageNet models, freezing early feature layers and fine-tuning the classifier head on MRI data.</li>
+          <li>Compared multiple architectures and augmentation strategies to find the best accuracy–efficiency trade-off.</li>
+          <li>Evaluated with confusion matrices and per-class metrics to ensure balanced performance across tumor types.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">Transfer Learning</div><div class="fc-desc">Pretrained visual features overcome the small-dataset problem.</div></div>
+          <div class="feature-card"><div class="fc-title">Multi-Class</div><div class="fc-desc">Classifies multiple brain tumor types from a single MRI scan.</div></div>
+          <div class="feature-card"><div class="fc-title">Data Augmentation</div><div class="fc-desc">Rotation, flip, and zoom augmentations expand the effective training set.</div></div>
+          <div class="feature-card"><div class="fc-title">Baseline Comparison</div><div class="fc-desc">From-scratch CNN baseline proves the value of transfer learning.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">Transfer</div><div class="ic-cap">Beats baseline</div></div>
+          <div class="impact-card"><div class="ic-fig">Multi-class</div><div class="ic-cap">Tumor types</div></div>
+          <div class="impact-card"><div class="ic-fig">Small data</div><div class="ic-cap">Effective training</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Cancer-Detection">View on GitHub</a></div>
     </div>
   </div>
 </section>
 
-<section class="win" id="win-emotion" data-title="Emotion Recognition" data-w="470" data-h="370" data-x="480" data-y="160" style="--tint: var(--c-lilac);" role="dialog" aria-label="Emotion Recognition">
+<section class="win project-win" id="win-emotion" data-title="Emotion Recognition" data-w="470" data-h="370" data-x="480" data-y="160" style="--tint: var(--c-lilac);" role="dialog" aria-label="Emotion Recognition">
   <div class="titlebar">
     <div class="dots"><button class="close" type="button" aria-label="Close"></button><button class="min" type="button" aria-label="Minimise"></button><button class="zoom" type="button" aria-label="Zoom"></button></div>
     <span class="name">Emotion Recognition</span>
   </div>
   <div class="win-body">
-    <div class="flow">
-      <h2>Emotion Recognition</h2>
-      <p class="transform"><span>Audio</span><span class="arrow">→</span><span class="out">sentiment</span></p>
-      <p class="lede">
-        Classifies sentiment from speech rather than text, reading tone and
-        voice features directly from the waveform — useful where what someone
-        says and how they say it disagree.
-      </p>
-      <ul class="chips"><li>Audio features</li><li>Deep learning</li><li>Jupyter</li></ul>
+    <div class="project-detail">
+      <div class="project-hero">
+        <h2>Emotion Recognition</h2>
+        <p class="transform"><span>Audio</span><span class="arrow">→</span><span class="out">sentiment</span></p>
+        <p class="lede">Classifies sentiment from speech rather than text, reading tone and voice features directly from the waveform — useful where what someone says and how they say it disagree.</p>
+        <ul class="chips">
+          <li>Audio features</li><li>Deep learning</li><li>Librosa</li><li>Jupyter</li>
+        </ul>
+      </div>
+
+      <div class="screenshot-placeholder">📸 Screenshot coming soon</div>
+
+      <div class="project-section">
+        <h3>Problem</h3>
+        <p>Text-based sentiment analysis misses a critical dimension — tone. Someone can say "I'm fine" sarcastically, angrily, or genuinely, and text alone can't tell the difference. Applications like call centre quality monitoring, mental health screening, and voice assistants need emotion detection from the audio signal itself.</p>
+      </div>
+
+      <div class="project-section">
+        <h3>Approach</h3>
+        <ul>
+          <li>Extracted audio features — MFCCs, chroma, mel-spectrogram, spectral contrast, and zero-crossing rate — using Librosa to build a rich feature representation of each utterance.</li>
+          <li>Trained and compared classical ML models (SVM, Random Forest) and deep learning architectures (CNN, LSTM) on labelled emotion datasets.</li>
+          <li>Experimented with data augmentation (pitch shifting, time stretching, noise injection) to handle class imbalance and improve generalisation.</li>
+          <li>Evaluated per-emotion precision and recall to ensure the model doesn't just learn the majority class.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h3>Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card"><div class="fc-title">Voice-First</div><div class="fc-desc">Reads emotion from how something is said, not what is said.</div></div>
+          <div class="feature-card"><div class="fc-title">Rich Features</div><div class="fc-desc">MFCCs, chroma, mel-spectrograms, and more for each audio clip.</div></div>
+          <div class="feature-card"><div class="fc-title">Model Comparison</div><div class="fc-desc">Classical ML vs. deep learning — benchmarked on the same data.</div></div>
+          <div class="feature-card"><div class="fc-title">Audio Augmentation</div><div class="fc-desc">Pitch shifting and noise injection to handle class imbalance.</div></div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Results &amp; Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-card"><div class="ic-fig">Multi-class</div><div class="ic-cap">Emotion labels</div></div>
+          <div class="impact-card"><div class="ic-fig">DL + ML</div><div class="ic-cap">Model comparison</div></div>
+          <div class="impact-card"><div class="ic-fig">Audio-only</div><div class="ic-cap">No text required</div></div>
+        </div>
+      </div>
+
       <div class="btn-row"><a class="btn pri" href="https://github.com/yasmineajailia/Emotion-Recognition">View on GitHub</a></div>
     </div>
   </div>
@@ -1232,12 +1654,26 @@
     syncDock();
     var body = w.querySelector('.win-body');
     if (body) body.scrollTop = 0;
+    /* auto-zoom project detail windows to full screen */
+    if (w.classList.contains('project-win') && !w.dataset.zoomed) {
+      w.dataset.pl = w.style.left; w.dataset.pt = w.style.top;
+      w.dataset.pw = w.style.width; w.dataset.ph = w.style.height;
+      w.style.left = '16px'; w.style.top = '44px';
+      w.style.width = (window.innerWidth - 32) + 'px';
+      w.style.height = (window.innerHeight - 130) + 'px';
+      w.dataset.zoomed = '1';
+    }
   }
 
   function close(id) {
     var w = win(id);
     if (!w) return;
     w.classList.remove('open');
+    /* reset zoom state for project windows so they re-zoom on next open */
+    if (w.classList.contains('project-win') && w.dataset.zoomed) {
+      delete w.dataset.zoomed;
+      delete w.dataset.placed;
+    }
     syncDock();
   }
 
