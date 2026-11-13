@@ -8,3 +8,6 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Large local files that exceed GitHub 100MB limit
+demos/NextLearn.mp4
