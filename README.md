@@ -1,4 +1,4 @@
-# Portfolio — Yasmine Laajailia
+# Portfolio Yasmine Laajailia
 
 An interactive desktop-style portfolio: draggable windows, a dock, and a
 soft animated wallpaper. Data science and NLP work, presented as a small
@@ -9,7 +9,7 @@ operating system.
 
 ## Built with
 
-Plain HTML, CSS and JavaScript in a single file — no framework, no build
+Plain HTML, CSS and JavaScript in a single file no framework, no build
 step, no dependencies. Canvas for the sparkle layer, CSS custom properties
 for theming, and `IntersectionObserver`-free window management.
 
